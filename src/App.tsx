@@ -1,11 +1,10 @@
-import React from "react";
+import { Greeting } from "./components/greeting/Greeting";
 
 function App() {
   return (
     <>
-      <h1>test2</h1>
+      <Greeting />
     </>
   );
 }
-
 export default App;
