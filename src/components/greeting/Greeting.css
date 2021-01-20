@@ -1,3 +1,4 @@
-h1 {
-  color: red;
+.greeting-heading {
+  font-family: sans-serif;
+  color:red;
 }
