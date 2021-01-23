@@ -1,13 +1,11 @@
 import { Routes } from "./routes/Routes";
-import { Greeting } from "./components/greeting/Greeting";
 import { Desktopnavigation } from "./components/navigation/desktopnavigation/Desktopnavigation";
-
+import "./shared/css/global.css";
+          
 function App() {
   return (
     <Routes>
       <>
-        <Greeting fname="John" lname="Doe" />
-        {/* <Greeting fname={"John"} lname={"Doe"} /> */}
         <Desktopnavigation />
       </>
     </Routes>
