@@ -1,4 +1,3 @@
-/** @useState: used for saving and updating variables, @useContext */
 import { useState, useContext } from "react";
 
 import { loginCredentialsInterface } from "../shared/interface/interface";
@@ -8,9 +7,6 @@ import RouteringPath from "../routes/RoutingPath";
 import { UserContext } from "../shared/provider/UserProvider";
 
 export const SignInView = () => {
-  /** Testing the React useState */
-  const [testValue, setTestValue] = useState("Default value");
-
   /** Login Credentials <INTERFACE> (https://drive.google.com/file/d/1vwMrN2qFAbMrCe_HK29r6MtsJP59FoC2/view 1:11:25) */
   const [
     loginCredentials,
@@ -31,8 +27,6 @@ export const SignInView = () => {
     setAuthenticatedUser(loginCredentials);
     history.push(RouteringPath.homeView);
   };
-
-  /** (2020-01-25 LS) 'VG' uppgift skapa function för onChange istället för onChange med spread operator */
 
   return (
     <>
@@ -66,27 +60,6 @@ export const SignInView = () => {
         <br />
         <button onClick={() => signIn()}>Sign in</button>
       </form>
-      <br />
-      <br />
-      <br />
-      <hr />
-      <h1>Testing the React useState (testValue, setTestValue)</h1>
-      <p>
-        <strong>testValue: </strong>
-        {testValue}
-      </p>
-      <p>
-        <button onClick={() => setTestValue("ran setTestValue")}>
-          Update a set value (onClick)
-        </button>
-      </p>
-
-      <input
-        placeholder="Update value (onChange)"
-        /** Target the input tag value attribute. */
-        onChange={(event) => setTestValue(event.target.value)}
-      />
-      <hr />
     </>
   );
 };

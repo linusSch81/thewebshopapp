@@ -6,8 +6,8 @@ import { Link } from "react-router-dom";
 /** @RoutingPath Variables with link paths */
 import RoutingPath from "../../../routes/RoutingPath";
 
+/** useContext React Hook: https://reactjs.org/docs/hooks-reference.html#usecontext */
 import { useContext } from "react";
-import RouteringPath from "../../../routes/RoutingPath";
 import { UserContext } from "../../../shared/provider/UserProvider";
 
 /** User Profile Image */
@@ -16,15 +16,24 @@ import { Profile } from "../../profile/Profile";
 export const Desktopnavigation = () => {
   const history = useHistory();
 
-  const [authenticatedUser, setAuthenticatedUser] = useContext(UserContext);
+// const [authenticatedUser, setAuthenticatedUser] = useContext(UserContext);
+const [authenticatedUser, ] = useContext(UserContext);
 
   const displaySignInTrigger = () => {
+    //return authenticatedUser?.username ? (
     return authenticatedUser ? (
-      <li onClick={() => history.push(RoutingPath.signInView)}>
-        <Profile /> Signed in as: {authenticatedUser.username}
+      <li className="desktop-navigation-item">
+        <Profile />
+        <div>User: {authenticatedUser.username} </div>
+        <Link to={RoutingPath.signInView}>Sign in</Link>
       </li>
     ) : (
-      <li onClick={() => history.push(RoutingPath.signInView)}>Sign in</li>
+      <li
+        className="desktop-navigation-item"
+        onClick={() => history.push(RoutingPath.signInView)}
+      >
+        Sign in
+      </li>
     );
   };
 
@@ -32,20 +41,29 @@ export const Desktopnavigation = () => {
     <>
       <nav className="desktop-navigation-wrapper">
         <strong>Desktop nav</strong>
-        <ul>
-          <li onClick={() => history.push(RoutingPath.homeView)}>
+        <ul className="desktop-navigation-list">
+          <li
+            className="desktop-navigation-item"
+            onClick={() => history.push(RoutingPath.homeView)}
+          >
             <img src={Logotype} alt="" className="navigation-logo" />
           </li>
-          <li onClick={() => history.push("/this-page-does-not-exist")}>
+          <li
+            className="desktop-navigation-item"
+            onClick={() => history.push("/this-page-does-not-exist")}
+          >
             test 404
           </li>
-          {/* <li onClick={() => history.push(RoutingPath.aboutView)}>About</li>  */}
-          <li>
+          <li
+            className="desktop-navigation-item"
+            onClick={() => history.push(RoutingPath.testView)}
+          >
+            testView
+          </li>
+          <li className="desktop-navigation-item">
             <Link to={RoutingPath.aboutView}>About</Link>
           </li>
-          {/* <li onClick={() => history.push(RoutingPath.signInView)}>Sign in</li> */}
-          {/* <li>{authenticatedUser?.username}</li> */}
-          {/* // optional chaining */}
+          {/* <li className="desktop-navigation-item">{authenticatedUser?.username}</li> */}
           {displaySignInTrigger()}
         </ul>
       </nav>
