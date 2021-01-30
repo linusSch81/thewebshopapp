@@ -7,7 +7,7 @@ import RoutingPath from "../../../routes/RoutingPath";
 
 import { UserContext } from "../../../shared/provider/UserProvider";
 
-import "./ProfileDropdown.css";
+import "./ProfileDropDown.css";
 
 export const ProfileDropDown = () => {
   /** Sign out 2: remove user from global variable */

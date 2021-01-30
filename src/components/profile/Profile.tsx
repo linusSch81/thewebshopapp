@@ -1,7 +1,7 @@
 // import { useContext } from "react";
 // import { UserContext } from "../../shared/provider/UserProvider";
 import "./Profile.css";
-import {ProfileDropDown} from "./profileDropdown/ProfileDropDown"
+import {ProfileDropDown} from "./profiledropdown/ProfileDropDown"
 export const Profile = () => {
   /** useContext makes it global, otherwise useState can be used instead */
   // const [authenticateUser, setAuthenticatedUser] = useContext(UserContext);
