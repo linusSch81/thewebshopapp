@@ -13,23 +13,27 @@ import { UserContext } from "../../../shared/provider/UserProvider";
 /** User Profile Image */
 import { Profile } from "../../profile/Profile";
 
+import { DesktopNavigationTabs } from "./desktopnavigationtabs/DesktopNavigationTabs";
+
 export const DesktopNavigation = () => {
   const history = useHistory();
 
-// const [authenticatedUser, setAuthenticatedUser] = useContext(UserContext);
-const [authenticatedUser, ] = useContext(UserContext);
+  // const [authenticatedUser, setAuthenticatedUser] = useContext(UserContext);
+  const [authenticatedUser] = useContext(UserContext);
 
   const displaySignInTrigger = () => {
     //return authenticatedUser?.username ? (
     return authenticatedUser ? (
-      <li className="desktop-navigation-item">
+      <li className="navigation-tabs-item">
         <Profile />
         <div>User: {authenticatedUser.username} </div>
-        <Link to={RoutingPath.signInView}>Sign in</Link>
+        <Link to={RoutingPath.signInView} className="sign-in-button">
+          Sign in
+        </Link>
       </li>
     ) : (
       <li
-        className="desktop-navigation-item"
+        className="navigation-tabs-item"
         onClick={() => history.push(RoutingPath.signInView)}
       >
         Sign in
@@ -40,30 +44,19 @@ const [authenticatedUser, ] = useContext(UserContext);
   return (
     <>
       <nav className="desktop-navigation-wrapper">
-        <strong>Desktop nav</strong>
-        <ul className="desktop-navigation-list">
+        <ul className="navigation-tabs-list">
           <li
-            className="desktop-navigation-item"
+            className="navigation-tabs-item"
             onClick={() => history.push(RoutingPath.homeView)}
           >
             <img src={Logotype} alt="" className="navigation-logo" />
           </li>
-          <li
-            className="desktop-navigation-item"
-            onClick={() => history.push("/this-page-does-not-exist")}
-          >
-            test 404
+          <li className="desktop-navigation-tabs">
+            <ul className="desktop-navigation-tabs-list">
+              <DesktopNavigationTabs />
+            </ul>
           </li>
-          <li
-            className="desktop-navigation-item"
-            onClick={() => history.push(RoutingPath.testView)}
-          >
-            testView
-          </li>
-          <li className="desktop-navigation-item">
-            <Link to={RoutingPath.aboutView}>About</Link>
-          </li>
-          {/* <li className="desktop-navigation-item">{authenticatedUser?.username}</li> */}
+
           {displaySignInTrigger()}
         </ul>
       </nav>

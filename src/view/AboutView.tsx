@@ -3,7 +3,7 @@ import React from "react";
 export const AboutView = () => {
   return (
     <>
-      <h1>About view</h1>
+      <h1>About us</h1>
     </>
   );
 };
