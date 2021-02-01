@@ -1,16 +1,17 @@
-import ".MobileNavigation.css";
-import Logotype from "../../../shared/images/logo.png";
+// import ".MobileNavigation.css";
+import { HamburgerButton } from "./hamburgerbutton/HamburgerButton";
+import { SideBar } from "./sidebar/SideBar";
+import { useState } from "react";
+
 export const MobileNavigation = () => {
+  const [openDrawer, setOpenDrawer] = useState<boolean>(false);
+
   return (
-    <nav className="mobile-navigation-wrapper">
-      <strong>Mobile nav</strong>
-      <ul>
-        <li>
-          <img src={Logotype} alt="" className="navigation-logo" />
-        </li>
-        <li>item 2</li>
-        <li>item 3</li>
-      </ul>
-    </nav>
+    <>
+      <nav className="mobile-navigation-wrapper">
+        <HamburgerButton drawerHandler={setOpenDrawer} />
+        <SideBar drawIsOpen={openDrawer} drawerHandler={setOpenDrawer} />
+      </nav>
+    </>
   );
 };

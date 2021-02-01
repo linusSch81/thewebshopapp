@@ -1,3 +1,4 @@
 .master-navigation-wrapper {
-  background-color: cadetblue;
+  position: sticky;
+  top: -1px;
 }

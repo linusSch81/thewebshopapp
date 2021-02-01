@@ -29,8 +29,8 @@ export const ProfileDropDown = () => {
   return (
     <nav className="profile-dropdown">
       <ul className="profile-dropdown-list">
-        <li className="profile-dropdown-item">Profile</li>
-        <li className="profile-dropdown-item">Settings</li>
+        {/* <li className="profile-dropdown-item">Profile</li> */}
+        {/* <li className="profile-dropdown-item">Settings</li> */}
         {/** Sign out 3: Onclick to trigger function  */}
         <li className="profile-dropdown-item" onClick={() => logout()}>
           Sign out

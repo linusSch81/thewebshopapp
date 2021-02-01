@@ -1,0 +1,29 @@
+.hamburger-button {
+  width: 5rem;
+  height: 5rem;
+  display: flex;
+  flex-flow: column nowrap;
+  border: none;
+  background: #fff;
+  color: #000;
+  justify-content: space-around;
+  padding: 1rem;
+  margin: 0;
+  box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.5);
+  outline: none;
+}
+.hamburger-button div {
+  height: 0.5rem;
+  background-color: black;
+  width: 100%;
+}
+.hamburger-button:hover,
+.hamburger-button:active,
+.hamburger-button:focus {
+  background: black;
+}
+.hamburger-button:hover div,
+.hamburger-button:active div,
+.hamburger-button:focus div {
+  background-color: white;
+}
