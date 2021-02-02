@@ -24,3 +24,4 @@ yarn-error.log*
 
 # Linus Ignores
 /tests/markup.html
+.eslintcache
