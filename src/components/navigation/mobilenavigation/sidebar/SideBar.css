@@ -6,7 +6,7 @@
   top: 0;
   left: 0;
   background-color: gainsboro;
-  padding: 3em;
+  padding: 0;
   transform: translateX(-100%);
   transition: transform 0.25s ease-out;
   max-width: 70vw;
@@ -42,7 +42,7 @@
 	display: block;
 	list-style: none;
 	margin: 0 auto 1.5em auto;
-	padding: 0;
+	padding: 1.5rem;
 }
 
 .mobile-navigation-tabs-list .navigation-tabs-item{

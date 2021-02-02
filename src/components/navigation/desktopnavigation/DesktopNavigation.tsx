@@ -15,6 +15,8 @@ import { Profile } from "../../profile/Profile";
 
 import { DesktopNavigationTabs } from "./desktopnavigationtabs/DesktopNavigationTabs";
 
+import { SignOutTrigger } from "../../signouttrigger/SignOutTrigger";
+
 export const DesktopNavigation = () => {
   const history = useHistory();
 
@@ -27,9 +29,7 @@ export const DesktopNavigation = () => {
       <li className="navigation-tabs-item">
         <Profile />
         <div>User: {authenticatedUser.username} </div>
-        <Link to={RoutingPath.signInView} className="sign-in-button">
-          Sign in
-        </Link>
+        <SignOutTrigger componentClass="button" />
       </li>
     ) : (
       <li

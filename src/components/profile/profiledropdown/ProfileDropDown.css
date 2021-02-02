@@ -1,7 +1,7 @@
 .profile-dropdown {
   display: none;
   position: absolute;
-  background-color: beige;
+  
   padding: 0.5em;
 }
 
@@ -19,3 +19,23 @@
 .profile-dropdown-item {
   padding: 0.5em;
 }
+
+.profile-dropdown,
+.profile-mobile-wrap{
+  background-color: beige;
+}
+
+.profile-mobile-wrap{
+  padding: 1.5em;
+}
+
+.profile-mobile-wrap .profile-image-img{
+  width: 80px;
+  height: 80px;
+}
+
+.profile-mobile-wrap .profile-dropdown{
+  display: block;
+  position: static;
+}
+

@@ -11,6 +11,8 @@ import { ExpertiseView } from "../view/navigationtabsviews/expertise/ExpertiseVi
 import { NewsView } from "../view/navigationtabsviews/news/NewsView";
 import { ShopView } from "../view/navigationtabsviews/shop/ShopView";
 
+import { UserProfileView } from "../view/user/UserProfileView";
+
 // import { CategoryView } from "../view/category/CategoryView";
 // import { ProductView } from "../view/product/ProductView";
 // import { SubCategoryView } from "../view/subcategory/SubCategoryView";
@@ -43,11 +45,21 @@ export const Routes = (props: { children: React.ReactChild }) => {
         <Route exact path={RoutingPath.signInView} component={SignInView} />
         <Route exact path={RoutingPath.testView} component={TestView} />
 
-        <Route exact path={RoutingPath.accessoriesView} component={AccessoriesView} />
+        <Route
+          exact
+          path={RoutingPath.accessoriesView}
+          component={AccessoriesView}
+        />
         <Route exact path={RoutingPath.brandsView} component={BrandsView} />
-        <Route exact path={RoutingPath.expertiseView} component={ExpertiseView} />
+        <Route
+          exact
+          path={RoutingPath.expertiseView}
+          component={ExpertiseView}
+        />
         <Route exact path={RoutingPath.newsView} component={NewsView} />
         <Route exact path={RoutingPath.shopView} component={ShopView} />
+
+        <Route exact path={RoutingPath.userProfileView} component={UserProfileView} />
 
         {/* <Route exact path={RoutingPath.categoryView} component={CategoryView} /> */}
         {/* <Route exact path={RoutingPath.productView} component={ProductView} /> */}

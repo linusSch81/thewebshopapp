@@ -20,12 +20,43 @@ export const SignInView = () => {
   const [authenticatedUser, setAuthenticatedUser] = useContext(UserContext);
 
   const signIn = () => {
-    /** Storage setItem() Method: https://www.w3schools.com/jsref/met_storage_setitem.asp */
+    /** localStorage property
+     * stored data is saved across browser session (unlike sessionStorage):
+     *    https://developer.mozilla.org/en-US/docs/Web/API/Window/localStorage
+     *
+     *    Storage setItem() Method:
+     *      https://www.w3schools.com/jsref/met_storage_setitem.asp
+     */
     localStorage.setItem("user", loginCredentials.username);
+  
+    /** Probably not a good idea to store password in localStorage */
+    // localStorage.setItem("password", loginCredentials.password);
 
     /** Add @loginCredentials stateValue globaly */
     setAuthenticatedUser(loginCredentials);
-    history.push(RouteringPath.homeView);
+    history.push(RouteringPath.userProfileView);
+  };
+
+  const updateLoginCredential = (inCase: string, inValue: string) => {
+    switch (inCase) {
+      case "password":
+        setLoginCredentials({
+          ...loginCredentials,
+          password: inValue,
+        });
+
+        break;
+      case "username":
+        setLoginCredentials({
+          ...loginCredentials,
+          username: inValue,
+        });
+        break;
+      default:
+        console.log(
+          `Error - updateLoginCredential("${inCase}","${inValue}"): "${inCase}" not set up in loginCredentialsInterface`
+        );
+    }
   };
 
   return (
@@ -34,28 +65,31 @@ export const SignInView = () => {
       <h2>Login Credentials</h2>
       <form>
         <input
+          type="text"
           placeholder={"User Name"}
-          /** Spread operator: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Spread_syntax */
-
-          /** Spread operator "...loginCredentials" is used so that only the @username is updated */
-          onChange={(event) =>
-            setLoginCredentials({
-              ...loginCredentials,
-              username: event.target.value,
-            })
-          }
+          onChange={(event) => {
+            updateLoginCredential("username", event.target.value);
+          }}
         />
         <br />
         <input
+          type="password"
           placeholder={"Password"}
+          onChange={(event) => {
+            updateLoginCredential("password", event.target.value);
+          }}
+          
+          
           /** Spread operator "...loginCredentials" is used so that only the @password is updated */
-          onChange={(event) =>
+          /*
+          onChange={(event) => {
             setLoginCredentials({
               ...loginCredentials,
               password: event.target.value,
-            })
-          }
-          type="password"
+            });
+          }}
+          */
+          
         />
         <br />
         <button onClick={() => signIn()}>Sign in</button>

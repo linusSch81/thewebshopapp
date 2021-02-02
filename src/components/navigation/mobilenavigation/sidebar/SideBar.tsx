@@ -1,5 +1,6 @@
 import "./SideBar.css";
 import { DesktopNavigationTabs } from "../../desktopnavigation/desktopnavigationtabs/DesktopNavigationTabs";
+import {Profile} from "../../../profile/Profile"
 
 export const SideBar = (props: {
   drawIsOpen: boolean;
@@ -12,10 +13,11 @@ export const SideBar = (props: {
         props.drawIsOpen ? "sidebar sidebar-open" : "sidebar sidebar-closed"
       }
     >
+      <Profile layout="mobile" />
       <ul className="mobile-navigation-tabs-list">
         <DesktopNavigationTabs />
       </ul>
-
+      
       <button
         onClick={() => props.drawerHandler(false)}
         className="sidebar-close-trigger"

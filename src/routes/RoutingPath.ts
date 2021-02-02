@@ -9,6 +9,8 @@ const expertiseView = "/expertise";
 const newsView = "/news";
 const shopView = "/shop";
 
+const userProfileView = "/user/profile";
+
 // const categoryView = "/category";
 // const productView = "/product";
 // const subCategoryView = "/sub-category";
@@ -24,6 +26,8 @@ export default {
   expertiseView,
   newsView,
   shopView,
+
+  userProfileView,
 
   // categoryView,
   // productView,
