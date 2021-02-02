@@ -4,7 +4,7 @@ import { DesktopNavigationTabs } from "../../desktopnavigation/desktopnavigation
 export const SideBar = (props: {
   drawIsOpen: boolean;
   drawerHandler: Function;
-  // drawerHandler: (handler: boolean) => void;
+  // drawerHandler: (handler: boolean) => void; /** Hårdtypad */
 }) => {
   return (
     <div
