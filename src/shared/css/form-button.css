@@ -1,0 +1,96 @@
+:root{
+	--font-family-button:sans-serif;
+	--font-weight-button:600;
+	--text-transform-button:none;
+	--border-radius-button:0.25em;
+	--color-button-base:Gray;
+	--color-button-invert:white;
+	--color-button-base-dark:DimGray;
+
+
+	--color-button-secondary-base:GhostWhite;
+	--color-button-secondary-invert:DimGray;
+	--color-button-secondary-base-dark:Gainsboro;
+}
+button{
+	font:inherit;
+	color: inherit;
+	padding: 0;
+	margin: 0;
+	background: none transparent;
+	border: none;
+	outline: none;
+	overflow:visible;
+	text-transform:none;
+}
+.button,
+.button:hover,
+.button:hover span{
+	text-decoration:none;
+}
+.button{
+	font-family:var(--font-family-button);
+	font-weight:var(--font-weight-button);
+	text-transform:var(--text-transform-button);
+	border-radius:var(--border-radius-button);
+	outline:0 none;
+	border-style:solid;
+	border-width:1px;
+	display:inline-block;
+	vertical-align:top;
+	padding:0.6em 0.8em;
+	text-align:center;
+	-webkit-user-select:none;
+	-moz-user-select:none;
+	-ms-user-select:none;
+	user-select:none;
+	text-shadow:none;
+	box-shadow:none;
+	background-image:none;
+	background-color:var(--color-button-base);
+	color: var(--color-button-invert);
+	border-color: var(--color-button-base-dark);
+}
+.button:hover{
+	text-shadow:none;
+	box-shadow:none;
+	background-image:none;
+	background-color:var(--color-button-base-dark);
+	color:var(--color-button-invert);
+	border-color:var(--color-button-base-dark);
+}
+.button:active{
+	text-shadow:none;
+	box-shadow:none;
+	background-image:none;
+	background-color: var(--color-button-base-dark);
+	color: var(--color-button-invert);
+	border-color: var(--color-button-base-dark);
+}
+
+
+.button-secondary{
+	text-shadow:none;
+	box-shadow:none;
+	background-image: none;
+	color:var(--color-button-secondary-invert);
+	background-color:var(--color-button-secondary-base);
+	border-color:var(--color-button-secondary-base-dark);
+}
+.button-secondary:hover{
+	text-shadow:none;
+	box-shadow:none;
+	background-image: none;
+	background-color:var(--color-button-secondary-base-dark);
+	color:var(--color-button-secondary-invert);
+	border-color:var(--color-button-secondary-base-dark);
+}
+.button-secondary:active,
+.button-secondary:focus{
+	text-shadow:none;
+	box-shadow:none;
+	background-image:none;
+	background-color:var(--color-button-secondary-base-dark);
+	color:var(--color-button-secondary-invert);
+	border-color:var(--color-button-secondary-base-dark);
+}

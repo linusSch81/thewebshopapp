@@ -1,6 +1,6 @@
 export const ExpertiseView = () => {
   return (
-    <div>
+    <div className="view">
       <h1>Expertise</h1>
       <p>
         Sed fringilla euismod arcu, sit amet vulputate mi molestie sed. Ut ut

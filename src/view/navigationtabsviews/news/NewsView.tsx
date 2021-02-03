@@ -1,6 +1,6 @@
 export const NewsView = () => {
   return (
-    <div>
+    <div className="view">
       <h1>News</h1>
       <p>
         Vestibulum dapibus velit non laoreet vehicula. Sed vel mauris quis ex

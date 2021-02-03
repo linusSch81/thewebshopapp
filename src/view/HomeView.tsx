@@ -1,24 +1,13 @@
-// import { useEffect, useState } from "react";
+import RoutingPath from "../routes/RoutingPath";
+import { Link } from "react-router-dom";
+
+
 export const HomeView = () => {
   return (
-    <>
-      <h1>Welcome Home!</h1>
-      <p>
-        Duis consequat placerat dui, eget facilisis dui vestibulum in.
-        Suspendisse auctor, nunc id suscipit faucibus, felis erat eleifend mi,
-        nec tempor leo purus id purus. Mauris ornare rhoncus nisi. Aliquam
-        ullamcorper sit amet risus et aliquet. Curabitur sodales facilisis
-      </p>
-      <p>
-        commodo. Mauris tempus molestie ante, id porta lacus ultricies a. Morbi
-        vestibulum, justo non fringilla elementum, augue ante placerat ligula,
-        vitae facilisis lectus quam eget nisl. Vivamus blandit lacinia viverra.
-        Aenean gravida malesuada ullamcorper. Duis pretium nulla id felis porta,
-        a efficitur lacus iaculis. Ut hendrerit massa eu vehicula porttitor.
-        Duis nulla purus, vehicula vel massa et, laoreet mattis risus. Sed
-        pellentesque sollicitudin eros, eget tristique risus fermentum ac. Donec
-        aliquam nisi et sapien gravida dapibus at in lorem.{" "}
-      </p>
-    </>
+    <div className="view">
+      <h1>Inlämningsuppgift 2 - React</h1>
+      <h2>Hej Arasto!</h2>
+      <p>VG uppgiften finns i: "thewebshopapp/src/view/<strong>SignInView.tsx</strong>" ( <Link to={RoutingPath.signInView}>{RoutingPath.signInView}</Link> )</p>
+    </div>
   );
 };

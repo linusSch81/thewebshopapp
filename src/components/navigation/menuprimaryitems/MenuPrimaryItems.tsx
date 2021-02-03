@@ -1,5 +1,5 @@
-import "./DesktopNavigationTabs.css";
-import RoutingPath from "../../../../routes/RoutingPath";
+import "./MenuPrimaryItems.css";
+import RoutingPath from "../../../routes/RoutingPath";
 // import { useHistory } from "react-router-dom";
 import { Link } from "react-router-dom";
 
@@ -12,7 +12,7 @@ import { Link } from "react-router-dom";
 
 /** const [authenticatedUser, setAuthenticatedUser] = useContext(UserContext); */
 
-export const DesktopNavigationTabs = () => {
+export const MenuPrimaryItems = () => {
   // const history = useHistory();
   // const [authenticatedUser,] = useContext(UserContext);
 
@@ -41,7 +41,7 @@ export const DesktopNavigationTabs = () => {
       </li>
 
       {/* <li
-        className="navigation-tabs-item"
+        className="navigation-tabs-item clickable"
         onClick={() => history.push(RoutingPath.testView)}
       >
         testView

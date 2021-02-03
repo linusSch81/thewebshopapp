@@ -33,7 +33,7 @@ export const TestView = () => {
   }, []);
 
   return (
-    <>
+    <div className="view">
       <h1>Testing</h1>
       <h2>components Greeting</h2>
       <ul>
@@ -51,7 +51,10 @@ export const TestView = () => {
         {testValue}
       </p>
       <p>
-        <button onClick={() => setTestValue("ran setTestValue")}>
+        <button
+          onClick={() => setTestValue("ran setTestValue")}
+          className="clickable"
+        >
           Update a set value (onClick)
         </button>
       </p>
@@ -65,6 +68,7 @@ export const TestView = () => {
       <h2>UserContext</h2>
 
       <button
+        className="clickable"
         onClick={() => {
           console.log(authenticatedUser);
         }}
@@ -88,11 +92,11 @@ export const TestView = () => {
       </ul>
 
       <h3>@number: {number}</h3>
-      <button onClick={() => setNumber(number + 1)}>
+      <button onClick={() => setNumber(number + 1)} className="clickable">
         Increment with @setNumber
       </button>
 
       <hr />
-    </>
+    </div>
   );
 };

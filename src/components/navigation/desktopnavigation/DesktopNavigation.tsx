@@ -12,7 +12,7 @@ import { UserContext } from "../../../shared/provider/UserProvider";
 /** User Profile Image */
 import { Profile } from "../../profile/Profile";
 
-import { DesktopNavigationTabs } from "./desktopnavigationtabs/DesktopNavigationTabs";
+import { MenuPrimaryItems } from "../menuprimaryitems/MenuPrimaryItems";
 
 import { SignOutTrigger } from "../../signouttrigger/SignOutTrigger";
 
@@ -27,11 +27,11 @@ export const DesktopNavigation = () => {
     return authenticatedUser ? (
       <li className="navigation-tabs-item">
         <Profile />
-        <SignOutTrigger componentClass="button" />
+        <SignOutTrigger componentClass="button button-secondary" />
       </li>
     ) : (
       <li
-        className="navigation-tabs-item"
+        className="navigation-tabs-item clickable"
         onClick={() => history.push(RoutingPath.signInView)}
       >
         Sign in
@@ -44,14 +44,14 @@ export const DesktopNavigation = () => {
       <nav className="desktop-navigation-wrapper">
         <ul className="navigation-tabs-list">
           <li
-            className="navigation-tabs-item"
+            className="navigation-tabs-item clickable"
             onClick={() => history.push(RoutingPath.homeView)}
           >
             <img src={Logotype} alt="" className="navigation-logo" />
           </li>
           <li className="desktop-navigation-tabs">
             <ul className="desktop-navigation-tabs-list">
-              <DesktopNavigationTabs />
+              <MenuPrimaryItems />
             </ul>
           </li>
 

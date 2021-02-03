@@ -1,5 +1,5 @@
 import "./SideBar.css";
-import { DesktopNavigationTabs } from "../../desktopnavigation/desktopnavigationtabs/DesktopNavigationTabs";
+import { MenuPrimaryItems } from "../../menuprimaryitems/MenuPrimaryItems";
 import {Profile} from "../../../profile/Profile"
 
 export const SideBar = (props: {
@@ -15,12 +15,12 @@ export const SideBar = (props: {
     >
       <Profile layout="mobile" />
       <ul className="mobile-navigation-tabs-list">
-        <DesktopNavigationTabs />
+        <MenuPrimaryItems />
       </ul>
       
       <button
         onClick={() => props.drawerHandler(false)}
-        className="sidebar-close-trigger"
+        className="sidebar-close-trigger button"
       >
         Close
       </button>

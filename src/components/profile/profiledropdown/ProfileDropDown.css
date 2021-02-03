@@ -1,8 +1,17 @@
+.profile-wrap {
+  position: relative;
+  width: 14rem;
+  max-width: 100%;
+}
 .profile-dropdown {
   display: none;
   position: absolute;
-  
+  right: 0;
+  left: 0;
   padding: 0.5em;
+  width: 14rem;
+  max-width: 100%;
+  margin: auto;
 }
 
 .profile-wrap:hover .profile-dropdown {
@@ -21,21 +30,21 @@
 }
 
 .profile-dropdown,
-.profile-mobile-wrap{
+.profile-mobile-wrap {
   background-color: beige;
 }
 
-.profile-mobile-wrap{
+.profile-mobile-wrap {
+  width: 100%;
   padding: 1.5em;
 }
 
-.profile-mobile-wrap .profile-image-img{
+.profile-mobile-wrap .profile-image-img {
   width: 80px;
   height: 80px;
 }
 
-.profile-mobile-wrap .profile-dropdown{
+.profile-mobile-wrap .profile-dropdown {
   display: block;
   position: static;
 }
-

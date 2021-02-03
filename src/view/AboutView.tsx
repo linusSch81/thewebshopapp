@@ -1,7 +1,7 @@
 
 export const AboutView = () => {
   return (
-    <>
+    <div className="view">
       <h1>About us</h1>
       <p>
         Ut iaculis lacinia felis ac volutpat. Pellentesque dapibus pretium
@@ -22,6 +22,6 @@ export const AboutView = () => {
         egestas. Nunc consequat, eros vel aliquam lobortis, erat eros iaculis
         sapien, vitae porttitor ligula mauris a tellus.
       </p>
-    </>
+    </div>
   );
 };

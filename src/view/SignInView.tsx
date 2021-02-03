@@ -1,3 +1,4 @@
+import "../shared/css/form-list.css"
 import { useState, useContext } from "react";
 
 import { loginCredentialsInterface } from "../shared/interface/interface";
@@ -29,7 +30,7 @@ export const SignInView = () => {
      *      https://www.w3schools.com/jsref/met_storage_setitem.asp
      */
     localStorage.setItem("user", loginCredentials.username);
-  
+
     /** Probably not a good idea to store password in localStorage */
     // localStorage.setItem("password", loginCredentials.password);
 
@@ -61,28 +62,30 @@ export const SignInView = () => {
   };
 
   return (
-    <>
+    <div className="view">
       <h1>Sign in</h1>
       <h2>Login Credentials</h2>
       <form>
-        <input
-          type="text"
-          placeholder={"User Name"}
-          onChange={(event) => {
-            updateLoginCredential("username", event.target.value);
-          }}
-        />
-        <br />
-        <input
-          type="password"
-          placeholder={"Password"}
-          onChange={(event) => {
-            updateLoginCredential("password", event.target.value);
-          }}
-          
-          
-          /** Spread operator "...loginCredentials" is used so that only the @password is updated */
-          /*
+        <ul className="form-list">
+          <li className="form-item">
+            <input
+              type="text"
+              placeholder={"User Name"}
+              onChange={(event) => {
+                updateLoginCredential("username", event.target.value);
+              }}
+            />
+          </li>
+          <li className="form-item">
+            <input
+              type="password"
+              placeholder={"Password"}
+              onChange={(event) => {
+                updateLoginCredential("password", event.target.value);
+              }}
+
+              /** Spread operator "...loginCredentials" is used so that only the @password is updated */
+              /*
           onChange={(event) => {
             setLoginCredentials({
               ...loginCredentials,
@@ -90,11 +93,13 @@ export const SignInView = () => {
             });
           }}
           */
-          
-        />
-        <br />
-        <button onClick={() => signIn()}>Sign in</button>
+            />
+          </li>
+          <li className="form-submit-item form-item">
+            <button className="button" onClick={() => signIn()}>Sign in</button>
+          </li>
+        </ul>
       </form>
-    </>
+    </div>
   );
 };

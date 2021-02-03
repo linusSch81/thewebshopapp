@@ -1,18 +1,4 @@
 .sign-out-trigger{
 	display: inline-block;
-	padding: 0;
-	margin: 0 auto;
-	border: none;
-	background-color: transparent;
-	cursor: pointer;
-	outline: none;
-	font-size: 1em;
-}
-
-.sign-out-trigger.button{
-	background-color: #fff;
-	padding: 0.375em;
-	border: 1px solid black;
-	border-radius: 0.5rem;
-	line-height: 1;
+	margin: 0.375em auto;
 }

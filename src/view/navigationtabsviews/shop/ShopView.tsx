@@ -1,6 +1,6 @@
 export const ShopView = () => {
   return (
-    <div>
+    <div className="view">
       <h1>Shop</h1>
       <p>
         Morbi et faucibus justo. Donec ut mi aliquam, ultricies arcu vel,

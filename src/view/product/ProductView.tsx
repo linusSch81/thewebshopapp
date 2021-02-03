@@ -1,7 +1,7 @@
 
 export const ProductView = () => {
 	return (
-		<div>
+		<div className="view">
 			<h1>Product</h1>
 		</div>
 	)

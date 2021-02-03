@@ -29,7 +29,7 @@ export const SignOutTrigger = (props: { text?: string; componentClass?: string; 
   };
 
   return (
-    <button className={props.componentClass ? (props.componentClass + " sign-out-trigger") : "sign-out-trigger"} onClick={() => logout()}>
+    <button className={props.componentClass ? (props.componentClass + " sign-out-trigger clickable") : "sign-out-trigger clickable"} onClick={() => logout()}>
       {props.text ? props.text : "Sign out"}
     </button>
   );

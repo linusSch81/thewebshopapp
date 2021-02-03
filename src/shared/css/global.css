@@ -1,12 +1,12 @@
 html {
-	box-sizing:border-box;
+  box-sizing: border-box;
   font-size: 62.5%;
   scroll-behavior: smooth;
 }
 *,
 *:before,
-*:after{
-	box-sizing:inherit;
+*:after {
+  box-sizing: inherit;
 }
 
 body {
@@ -14,4 +14,11 @@ body {
   padding: 0;
   font-family: sans-serif;
   font-size: 1.6rem;
+}
+.clickable {
+  cursor: pointer;
+}
+.view{
+  padding: 0 1.5rem;
+  overflow: hidden;
 }

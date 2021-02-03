@@ -1,6 +1,6 @@
 export const BrandsView = () => {
   return (
-    <div>
+    <div className="view">
       <h1>Brands</h1>
       <p>
         Donec pellentesque, odio sed posuere porttitor, ligula ex consequat sem,

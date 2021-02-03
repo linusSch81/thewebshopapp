@@ -1,6 +1,6 @@
 export const AccessoriesView = () => {
   return (
-    <div>
+    <div className="view">
       <h1>Accessories</h1>
       <p>
         Mauris a justo faucibus, pharetra dui sit amet, sagittis ante. Class
