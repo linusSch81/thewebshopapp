@@ -5,8 +5,8 @@ export const ProfileDropDown = () => {
   return (
     <nav className="profile-dropdown">
       <ul className="profile-dropdown-list">
-        {/* <li className="profile-dropdown-item">Profile</li> */}
-        {/* <li className="profile-dropdown-item">Settings</li> */}
+        <li className="profile-dropdown-item" style={{opacity:0.25}}>Profile</li>
+        <li className="profile-dropdown-item" style={{opacity:0.25}}>Settings</li>
         <li className="profile-dropdown-item">
           <SignOutTrigger text="Logga ut" />
         </li>

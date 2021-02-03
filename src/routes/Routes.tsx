@@ -25,6 +25,7 @@ import { useEffect, useContext } from "react";
 export const Routes = (props: { children: React.ReactChild }) => {
   /** Make it so that the user is still logged in when they return */
   const [authenticatedUser, setAuthenticatedUser] = useContext(UserContext);
+  
   useEffect(() => {
     /** Added if statement because when localStorage is empty in the browser it gets 'null'(and not undefined) value which returns TRUE (undefined would return false) */
     if (localStorage.getItem("user")) {

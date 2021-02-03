@@ -17,7 +17,8 @@ export const SignInView = () => {
   });
   const history = useHistory();
 
-  const [authenticatedUser, setAuthenticatedUser] = useContext(UserContext);
+  //const [authenticatedUser, setAuthenticatedUser] = useContext(UserContext);
+  const [, setAuthenticatedUser] = useContext(UserContext);
 
   const signIn = () => {
     /** localStorage property

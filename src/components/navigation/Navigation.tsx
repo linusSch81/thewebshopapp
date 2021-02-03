@@ -1,10 +1,11 @@
-import "./Navigation.css"
+import "./Navigation.css";
 import { DesktopNavigation } from "../navigation/desktopnavigation/DesktopNavigation";
 import { MobileNavigation } from "../navigation/mobilenavigation/MobileNavigation";
 import { useWindowDimensions } from "../../hooks/useWindowDimensions";
 
 export const Navigation = () => {
-  const { height, width } = useWindowDimensions();
+  // const { height, width } = useWindowDimensions();
+  const { width } = useWindowDimensions();
 
   const diplayNavigationDependingOnDevice = () => {
     return width >= 640 ? <DesktopNavigation /> : <MobileNavigation />;

@@ -10,7 +10,8 @@ import RoutingPath from "../../routes/RoutingPath";
 
 export const SignOutTrigger = (props: { text?: string; componentClass?: string; }) => {
   /** Sign out 1: remove user from global variable */
-  const [authenticatedUser, setAuthenticatedUser] = useContext(UserContext);
+  // const [authenticatedUser, setAuthenticatedUser] = useContext(UserContext);
+  const [,setAuthenticatedUser] = useContext(UserContext);
 
   /** Sign out 3: Redirect user to another view e.g HomeView */
   const history = useHistory();

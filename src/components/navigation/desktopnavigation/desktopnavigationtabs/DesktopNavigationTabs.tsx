@@ -14,7 +14,7 @@ import { Link } from "react-router-dom";
 
 export const DesktopNavigationTabs = () => {
   // const history = useHistory();
-  // const [authenticatedUser] = useContext(UserContext);
+  // const [authenticatedUser,] = useContext(UserContext);
 
   return (
     <>

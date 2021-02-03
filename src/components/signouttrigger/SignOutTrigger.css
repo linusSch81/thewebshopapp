@@ -6,6 +6,7 @@
 	background-color: transparent;
 	cursor: pointer;
 	outline: none;
+	font-size: 1em;
 }
 
 .sign-out-trigger.button{
