@@ -1,4 +1,4 @@
-import "./DesktopNavigation.css";
+import "./DesktopNavigation.scss";
 import Logotype from "../../../shared/images/logo.png";
 import { useHistory } from "react-router-dom";
 /** Used @Link which converts to an a-tag with history push like useHistory logic instead of reloading page */

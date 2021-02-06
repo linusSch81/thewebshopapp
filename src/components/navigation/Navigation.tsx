@@ -1,4 +1,4 @@
-import "./Navigation.css";
+import "./Navigation.scss";
 import { DesktopNavigation } from "../navigation/desktopnavigation/DesktopNavigation";
 import { MobileNavigation } from "../navigation/mobilenavigation/MobileNavigation";
 import { useWindowDimensions } from "../../hooks/useWindowDimensions";

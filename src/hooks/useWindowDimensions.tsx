@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 
-// gets innerWidth and innerHeight from window
+/** gets innerWidth and innerHeight from window */
 const getWindowDimensions = () => {
   const { innerWidth: width, innerHeight: height } = window;
   return { height, width };
@@ -13,7 +13,7 @@ export const useWindowDimensions = () => {
   };
   useEffect(() => {
     window.addEventListener("resize", handleResize);
-    // remove EventListener so to reduce memory leak, so that it is not run all the time
+    /** Remove EventListener so to reduce memory leak, so that it is not run all the time  */
     return () => window.removeEventListener("resize", handleResize);
   }, []);
   return windowDimensions;

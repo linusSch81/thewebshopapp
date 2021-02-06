@@ -1,0 +1,15 @@
+@import "variables";
+@import "font";
+@import "reset";
+@import "tags";
+@import "typography";
+@import "form-button.scss";
+@import "form-list.scss";
+
+.clickable {
+  cursor: pointer;
+}
+.view {
+  padding: 0 1.5rem;
+  overflow: hidden;
+}

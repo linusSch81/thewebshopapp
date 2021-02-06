@@ -1,4 +1,3 @@
-import "../shared/css/form-list.css"
 import { useState, useContext } from "react";
 
 import { loginCredentialsInterface } from "../shared/interface/interface";

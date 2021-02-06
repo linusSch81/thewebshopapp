@@ -1,4 +1,4 @@
-// import ".MobileNavigation.css";
+// import ".MobileNavigation.scss";
 import { HamburgerButton } from "./hamburgerbutton/HamburgerButton";
 import { SideBar } from "./sidebar/SideBar";
 import { useState } from "react";
@@ -14,7 +14,6 @@ export const MobileNavigation = () => {
         <HamburgerButton drawerHandler={setOpenDrawer} />
         <SideBar drawIsOpen={openDrawer} drawerHandler={setOpenDrawer} />
         {!openDrawer || <BackDrop drawHandler={setOpenDrawer} /> }
-        
       </nav>
     </>
   );

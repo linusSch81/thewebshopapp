@@ -1,4 +1,4 @@
-import "./BackDrop.css"
+import "./BackDrop.scss"
 
 export const BackDrop = (props: {drawHandler: Function}) => {
 	return (

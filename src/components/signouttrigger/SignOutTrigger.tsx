@@ -1,4 +1,4 @@
-import "./SignOutTrigger.css";
+import "./SignOutTrigger.scss";
 
 /** Sign out 1: remove user from global variable */
 import { useContext } from "react";

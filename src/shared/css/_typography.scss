@@ -1,0 +1,423 @@
+html {
+  font-family: sans-serif;
+  font-size: 62.5%;
+}
+body {
+  font-weight: $font-weight-body;
+  font-size: $font-size-body;
+  line-height: $line-height-body;
+  letter-spacing: $letter-spacing-body;
+}
+h1 {
+  max-width: 24ch;
+  margin-left: 0;
+  margin-right: 0;
+}
+h1,
+.h1 {
+  font-weight: $font-weight-h1;
+  text-transform: $text-transform-h1;
+  font-size: $font-size-h1;
+  line-height: $line-height-h1;
+  letter-spacing: $letter-spacing-h1;
+}
+h1 {
+  margin-top: $margin-top-h1;
+  padding-top: $padding-top-h1;
+  padding-bottom: $padding-bottom-h1;
+  margin-bottom: $margin-bottom-h1;
+}
+h1 + .preamble {
+  font-size: $font-size-h3;
+  line-height: $line-height-h3;
+  margin-top: -1 * $margin-bottom-h1;
+  padding-top: $leading-0-5;
+  padding-bottom: $padding-bottom-h1;
+  margin-bottom: $margin-bottom-h1;
+}
+h1,
+h1 a {
+  color: $color-text-heading;
+}
+p {
+  max-width: 75ch;
+  margin: 0 0 $leading-1 0;
+  padding: 0;
+}
+b,
+strong {
+  font-weight: $font-weight-body-bold;
+}
+a {
+  text-decoration: none;
+  color: $color-link;
+}
+a:focus {
+  // outline-width: 1px;
+  // outline-style: solid;
+  // outline-color: $color-accent-dark;
+  // outline-offset: 1rem;
+}
+.preamble {
+  display: block;
+  font-size: $font-size-large-1;
+  line-height: $line-height-large-1;
+  font-style: normal;
+  max-width: 65ch;
+  color: $color-text-body;
+  color: rgba($color-text-body, 0.75);
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow-wrap: anywhere;
+  hyphens: auto;
+}
+@media screen and (min-width: 600px) and (max-width: 919px) {
+  html {
+    font-size: calc(9px + (10 - 9) * ((100vw - 600px) / (919 - 600)));
+  }
+}
+@media screen and (min-width: 320px) and (max-width: 599px) {
+  html {
+    font-size: 47.5%;
+    font-size: calc(7.8px + (9 - 7.8) * ((100vw - 320px) / (599 - 320)));
+  }
+}
+
+@media screen and (max-width: 319px) {
+  html {
+    font-size: 47.5%;
+    font-size: calc(7px + (10 - 7) * (100vw - 220px) / (319 - 220));
+  }
+}
+body {
+  font-family: $font-family-body;
+}
+h1,
+.h1 {
+  font-family: $font-family-h1;
+}
+h2,
+h3,
+h4,
+h5,
+h6 {
+  max-width: 24ch;
+  margin-left: 0;
+  margin-right: 0;
+}
+h2,
+.h2 {
+  font-family: $font-family-h2;
+  font-weight: $font-weight-h2;
+  text-transform: $text-transform-h2;
+  font-size: $font-size-h2;
+  line-height: $line-height-h2;
+  letter-spacing: $letter-spacing-h2;
+}
+h2 {
+  margin-top: $margin-top-h2;
+  padding-top: $padding-top-h2;
+  padding-bottom: $padding-bottom-h2;
+  margin-bottom: $margin-bottom-h2;
+}
+h2 + .preamble {
+  font-size: $font-size-h4;
+  line-height: $font-size-h4;
+  margin-top: -1 * $margin-bottom-h2;
+  padding-top: $leading-0-5;
+  padding-bottom: $padding-bottom-h2;
+  margin-bottom: $margin-bottom-h2;
+}
+h3,
+.h3 {
+  font-family: $font-family-h3;
+  font-weight: $font-weight-h3;
+  text-transform: $text-transform-h3;
+  font-size: $font-size-h3;
+  line-height: $line-height-h3;
+  letter-spacing: $letter-spacing-h3;
+}
+h3 {
+  margin-top: $margin-top-h3;
+  padding-top: $padding-top-h3;
+  padding-bottom: $padding-bottom-h3;
+  margin-bottom: $margin-bottom-h3;
+}
+h3 + .preamble {
+  font-size: $font-size-h5;
+  line-height: $font-size-h5;
+  margin-top: -1 * $margin-bottom-h3;
+  padding-top: $leading-0-5;
+  padding-bottom: $padding-bottom-h3;
+  margin-bottom: $margin-bottom-h3;
+}
+h4,
+.h4 {
+  font-family: $font-family-h4;
+  font-weight: $font-weight-h4;
+  text-transform: $text-transform-h4;
+  font-size: $font-size-h4;
+  line-height: $line-height-h4;
+  letter-spacing: $letter-spacing-h4;
+}
+h4 {
+  margin-top: $margin-top-h4;
+  padding-top: $padding-top-h4;
+  padding-bottom: $padding-bottom-h4;
+  margin-bottom: $margin-bottom-h4;
+}
+h5,
+.h5 {
+  font-family: $font-family-h5;
+  font-weight: $font-weight-h5;
+  text-transform: $text-transform-h5;
+  font-size: $font-size-h5;
+  line-height: $line-height-h5;
+  letter-spacing: $letter-spacing-h5;
+}
+h5 {
+  margin-top: $margin-top-h5;
+  padding-top: $padding-top-h5;
+  padding-bottom: $padding-bottom-h5;
+  margin-bottom: $margin-bottom-h5;
+}
+h6,
+.h6 {
+  font-family: $font-family-h6;
+  font-weight: $font-weight-h6;
+  text-transform: $text-transform-h6;
+  font-size: $font-size-h6;
+  line-height: $line-height-h6;
+  letter-spacing: $letter-spacing-h6;
+}
+h6 {
+  margin-top: $margin-top-h6;
+  padding-top: $padding-top-h6;
+  padding-bottom: $padding-bottom-h6;
+  margin-bottom: $margin-bottom-h6;
+}
+h1 + h2,
+h1 + h3,
+h2 + h3,
+ul h1,
+ul h2,
+ul h3,
+ul h4,
+ul h5,
+ul h6 {
+  margin-top: 0 !important;
+}
+h1 span,
+h2 span,
+h3 span {
+  display: inline-block;
+  vertical-align: baseline;
+}
+h2,
+h3,
+h4,
+h5,
+h6,
+h2 a,
+h3 a,
+h4 a,
+h5 a,
+h6 a {
+  color: $color-text-heading;
+}
+h1 a:hover,
+h2 a:hover,
+h3 a:hover,
+h4 a:hover,
+h5 a:hover,
+h6 a:hover {
+  color: $color-link;
+}
+b,
+strong {
+  font-family: $font-family-body-bold;
+}
+.large-3 {
+  font-size: $font-size-large-3;
+  line-height: $line-height-large-3;
+}
+.large-2 {
+  font-size: $font-size-large-2;
+  line-height: $line-height-large-2;
+}
+.large-1 {
+  font-size: $font-size-large-1;
+  line-height: $line-height-large-1;
+}
+.small-1 {
+  font-size: $font-size-small-1;
+  line-height: $line-height-small-1;
+}
+.small-2,
+small {
+  font-size: $font-size-small-2;
+  line-height: $line-height-small-2;
+}
+.small-3 {
+  font-size: $font-size-small-3;
+  line-height: $line-height-small-3;
+}
+a:hover {
+  text-decoration: underline;
+}
+q {
+  font-family: $font-family-quotation;
+  font-weight: $font-weight-quotation;
+  font-style: $font-style-quotation;
+  text-transform: $text-transform-quotation;
+  font-size: 1.166em;
+  opacity: 0.85;
+}
+mark {
+  font-family: $font-family-body;
+  font-weight: $font-weight-body;
+  font-style: normal;
+  color: $color-base;
+  border-radius: 1px;
+}
+blockquote,
+blockquote strong {
+  font-family: $font-family-body-bold;
+  font-weight: $font-weight-body-bold;
+  font-size: $font-size-body;
+  line-height: $line-height-body;
+  letter-spacing: $letter-spacing-body;
+  margin: 0;
+  padding: 0;
+}
+blockquote {
+  margin-top: $leading-3;
+  margin-bottom: $leading-1;
+}
+blockquote strong {
+  display: block;
+}
+blockquote p {
+  hanging-punctuation: first;
+  font-family: $font-family-quotation;
+  font-weight: $font-weight-quotation;
+  font-style: $font-style-quotation;
+  text-transform: $text-transform-quotation;
+  font-size: 5.8rem;
+  line-height: $leading-2;
+  margin: 0;
+  padding: 0;
+}
+.preamble {
+  font-family: $font-family-preamble;
+  font-weight: $font-weight-preamble;
+  font-style: $font-style-preamble;
+  text-transform: $text-transform-preamble;
+  font-size: 1em;
+}
+@media screen and (max-width: 599px) {
+  h1,
+  .h1 {
+    font-family: $font-family-h3;
+    font-weight: $font-weight-h3;
+    text-transform: $text-transform-h3;
+    font-size: $font-size-h3;
+    line-height: $line-height-h3;
+    letter-spacing: $letter-spacing-h3;
+  }
+  h1 {
+    margin-top: $margin-top-h3;
+    padding-top: $padding-top-h3;
+    padding-bottom: $padding-bottom-h3;
+    margin-bottom: $margin-bottom-h3;
+  }
+  h1 + .preamble {
+    margin-top: -1 * $margin-bottom-h3;
+    padding-top: $leading-0-5;
+    padding-bottom: $padding-bottom-h3;
+    margin-bottom: $margin-bottom-h3;
+  }
+  h2,
+  .h2 {
+    font-family: $font-family-h4;
+    font-weight: $font-weight-h4;
+    text-transform: $text-transform-h4;
+    font-size: $font-size-h4;
+    line-height: $line-height-h4;
+    letter-spacing: $letter-spacing-h4;
+  }
+  h2 {
+    margin-top: $margin-top-h4;
+    padding-top: $padding-top-h4;
+    padding-bottom: $padding-bottom-h4;
+    margin-bottom: $margin-bottom-h4;
+  }
+  h2 + .preamble {
+    margin-top: -1 * $margin-bottom-h4;
+    padding-top: $leading-0-5;
+    padding-bottom: $padding-bottom-h4;
+    margin-bottom: $margin-bottom-h4;
+  }
+  h3,
+  .h3 {
+    font-family: $font-family-h5;
+    font-weight: $font-weight-h5;
+    text-transform: $text-transform-h5;
+    font-size: $font-size-h5;
+    line-height: $line-height-h5;
+    letter-spacing: $letter-spacing-h5;
+  }
+  h3 {
+    margin-top: $margin-top-h5;
+    padding-top: $padding-top-h5;
+    padding-bottom: $padding-bottom-h5;
+    margin-bottom: $margin-bottom-h5;
+  }
+  h3 + .preamble {
+    margin-top: -1 * $margin-bottom-h5;
+    padding-top: $leading-0-5;
+    padding-bottom: $padding-bottom-h5;
+    margin-bottom: $margin-bottom-h5;
+  }
+  h4,
+  .h4,
+  h5,
+  .h5,
+  h6,
+  .h6 {
+    font-family: $font-family-h6;
+    font-weight: $font-weight-h6;
+    text-transform: $text-transform-h6;
+  }
+  h4,
+  .h4 {
+    font-size: $font-size-h6;
+    line-height: $line-height-h6;
+    letter-spacing: $letter-spacing-h6;
+  }
+  h5,
+  .h5 {
+    font-size: $font-size-large-3;
+    line-height: $line-height-large-3;
+    letter-spacing: normal;
+  }
+  h6,
+  .h6 {
+    font-size: $font-size-large-2;
+    line-height: $line-height-large-2;
+    letter-spacing: normal;
+  }
+  h4,
+  h5,
+  h6 {
+    margin-top: $margin-top-h6;
+    padding-top: $padding-top-h6;
+    padding-bottom: $padding-bottom-h6;
+    margin-bottom: $margin-bottom-h6;
+  }
+}

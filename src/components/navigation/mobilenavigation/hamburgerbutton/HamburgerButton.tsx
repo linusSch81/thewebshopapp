@@ -1,4 +1,4 @@
-import "./HamburgerButton.css";
+import "./HamburgerButton.scss";
 
 export const HamburgerButton = (props: {
   drawerHandler: (handler: boolean) => void;

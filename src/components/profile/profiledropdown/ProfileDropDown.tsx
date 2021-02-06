@@ -1,4 +1,4 @@
-import "./ProfileDropDown.css";
+import "./ProfileDropDown.scss";
 import { SignOutTrigger } from "../../signouttrigger/SignOutTrigger";
 
 export const ProfileDropDown = () => {

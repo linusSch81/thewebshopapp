@@ -1,4 +1,4 @@
-import "./MenuPrimaryItems.css";
+import "./MenuPrimaryItems.scss";
 import RoutingPath from "../../../routes/RoutingPath";
 // import { useHistory } from "react-router-dom";
 import { Link } from "react-router-dom";
@@ -19,25 +19,25 @@ export const MenuPrimaryItems = () => {
   return (
     <>
       <li className="navigation-tabs-item">
-        <Link to={RoutingPath.aboutView}>About</Link>
+        <Link to={RoutingPath.aboutView} className="navigation-tabs-trigger">About</Link>
       </li>
 
       <li className="navigation-tabs-item">
-        <Link to={RoutingPath.brandsView}>Brands</Link>
+        <Link to={RoutingPath.brandsView} className="navigation-tabs-trigger">Brands</Link>
       </li>
       <li className="navigation-tabs-item">
-        <Link to={RoutingPath.accessoriesView}>Accessories</Link>
+        <Link to={RoutingPath.accessoriesView} className="navigation-tabs-trigger">Accessories</Link>
       </li>
       <li className="navigation-tabs-item">
-        <Link to={RoutingPath.expertiseView}>Expertise</Link>
-      </li>
-
-      <li className="navigation-tabs-item">
-        <Link to={RoutingPath.newsView}>News</Link>
+        <Link to={RoutingPath.expertiseView} className="navigation-tabs-trigger">Expertise</Link>
       </li>
 
       <li className="navigation-tabs-item">
-        <Link to={RoutingPath.shopView}>Shop</Link>
+        <Link to={RoutingPath.newsView} className="navigation-tabs-trigger">News</Link>
+      </li>
+
+      <li className="navigation-tabs-item">
+        <Link to={RoutingPath.shopView} className="navigation-tabs-trigger">Shop</Link>
       </li>
 
       {/* <li
@@ -48,16 +48,16 @@ export const MenuPrimaryItems = () => {
       </li> */}
 
       {/* <li className="navigation-tabs-item">
-        <Link to={RoutingPath.categoryView}>Category</Link>
+        <Link to={RoutingPath.categoryView} className="navigation-tabs-trigger">Category</Link>
       </li> */}
 
       {/* <li className="navigation-tabs-item">
-        <Link to={RoutingPath.productView}>Product</Link>
+        <Link to={RoutingPath.productView} className="navigation-tabs-trigger">Product</Link>
       </li> */}
       {/* <li className="navigation-tabs-item">
-        <Link to={RoutingPath.subCategoryView}>Sub Category</Link>
+        <Link to={RoutingPath.subCategoryView} className="navigation-tabs-trigger">Sub Category</Link>
       </li> */}
-      {/* <li className="navigation-tabs-item">{authenticatedUser?.username}</li> */}
+      {/* <li className="navigation-tabs-item" className="navigation-tabs-trigger">{authenticatedUser?.username}</li> */}
     </>
   );
 };

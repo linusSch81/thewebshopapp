@@ -1,8 +1,9 @@
-import "./shared/css/global.css";
-import "./shared/css/form-button.css";
+import "./shared/css/global.scss";
 import { Routes } from "./routes/Routes";
 import { Navigation } from "./components/navigation/Navigation";
 import { UserProvider } from "./shared/provider/UserProvider";
+
+
 
 function App() {
   return (

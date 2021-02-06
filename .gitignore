@@ -25,3 +25,7 @@ yarn-error.log*
 # Linus Ignores
 /tests/markup.html
 .eslintcache
+.sass-cache/
+*.css.map
+*.sass.map
+*.scss.map

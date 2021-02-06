@@ -1,6 +1,6 @@
 import { useContext } from "react";
 import { UserContext } from "../../shared/provider/UserProvider";
-import "./Profile.css";
+import "./Profile.scss";
 import {ProfileDropDown} from "./profiledropdown/ProfileDropDown"
 export const Profile = (props: {layout?: string}) => {
   /** useContext makes it global, otherwise useState can be used instead */

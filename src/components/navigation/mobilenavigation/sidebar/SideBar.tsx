@@ -1,4 +1,4 @@
-import "./SideBar.css";
+import "./SideBar.scss";
 import { MenuPrimaryItems } from "../../menuprimaryitems/MenuPrimaryItems";
 import {Profile} from "../../../profile/Profile"
 
