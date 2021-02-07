@@ -14,7 +14,7 @@ export const SideBar = (props: {
       }
     >
       <Profile layout="mobile" />
-      <ul className="mobile-navigation-tabs-list">
+      <ul className="mobile-navigation-tabs-list navigation-tabs-list">
         <MenuPrimaryItems />
       </ul>
       

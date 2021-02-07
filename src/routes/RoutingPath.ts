@@ -1,35 +1,42 @@
 const homeView = "/";
 const aboutView = "/about";
 const signInView = "/login";
-const testView = "/test";
 
-const accessoriesView = "/accessories";
-const brandsView = "/brands";
-const expertiseView = "/expertise";
 const newsView = "/news";
 const shopView = "/shop";
 
 const userProfileView = "/user/profile";
+const departmentView = "/department";
+const categoryView = "/category";
+const subCategoryView = "/sub-category";
+const productView = "/product";
 
-// const categoryView = "/category";
-// const productView = "/product";
-// const subCategoryView = "/sub-category";
+const backPacksView = "/backpacks";
+
+const testView = "/test";
+const accessoriesView = "/accessories";
+const brandsView = "/brands";
+const expertiseView = "/expertise";
 
 export default {
   homeView,
   aboutView,
   signInView,
-  testView,
 
-  accessoriesView,
-  brandsView,
-  expertiseView,
   newsView,
   shopView,
 
   userProfileView,
+  departmentView,
+  categoryView,
+  subCategoryView,
+  productView,
 
-  // categoryView,
-  // productView,
-  // subCategoryView,
+  backPacksView,
+
+  testView,
+  accessoriesView,
+  brandsView,
+  expertiseView,
+
 };

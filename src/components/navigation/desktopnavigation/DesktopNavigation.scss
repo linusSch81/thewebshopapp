@@ -1,10 +1,7 @@
-.navigation-logo {
-  width: 9rem;
-  max-width: 100%;
-  vertical-align: bottom;
-}
+@import "../../../shared/css/variables";
+
 .desktop-navigation-wrapper {
-  background-color: SeaShell;
+  background-color: $color-white;
 }
 .desktop-navigation-tabs-list {
   list-style: none;
@@ -17,4 +14,23 @@
 
 .desktop-navigation-wrapper .navigation-tabs-item:last-child {
   margin-right: 0;
+}
+
+.desktop-navigation-tabs-list{
+  .navigation-tabs-sub-list{
+    position:absolute;
+	top:-9999em;
+	left:-9999em;
+	background-color: $color-light-1;
+	padding: 0.75em 1.5em;
+	margin:0.75em 0 0 0;
+    
+  }
+  .navigation-tabs-item{
+    position:relative;
+  }
+  .navigation-tabs-item:hover .navigation-tabs-sub-list{
+    top:inherit;
+	left:inherit;
+  }
 }

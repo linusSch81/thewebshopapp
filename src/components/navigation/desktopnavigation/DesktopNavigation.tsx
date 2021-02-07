@@ -1,5 +1,5 @@
 import "./DesktopNavigation.scss";
-import Logotype from "../../../shared/images/logo.png";
+import  {Logo} from "../../logo/Logo";
 import { useHistory } from "react-router-dom";
 /** Used @Link which converts to an a-tag with history push like useHistory logic instead of reloading page */
 /** @RoutingPath Variables with link paths */
@@ -16,11 +16,13 @@ import { MenuPrimaryItems } from "../menuprimaryitems/MenuPrimaryItems";
 
 import { SignOutTrigger } from "../../signouttrigger/SignOutTrigger";
 
+import { CartSideBar } from "../../../components/shop/cartsidebar/CartSideBar";
+
 export const DesktopNavigation = () => {
   const history = useHistory();
 
   // const [authenticatedUser, setAuthenticatedUser] = useContext(UserContext);
-  const [authenticatedUser,] = useContext(UserContext);
+  const [authenticatedUser] = useContext(UserContext);
 
   const displaySignInTrigger = () => {
     //return authenticatedUser?.username ? (
@@ -44,10 +46,9 @@ export const DesktopNavigation = () => {
       <nav className="desktop-navigation-wrapper">
         <ul className="navigation-tabs-list">
           <li
-            className="navigation-tabs-item clickable"
-            onClick={() => history.push(RoutingPath.homeView)}
+            className="navigation-tabs-item"
           >
-            <img src={Logotype} alt="" className="navigation-logo" />
+           <Logo />
           </li>
           <li className="desktop-navigation-tabs">
             <ul className="desktop-navigation-tabs-list">
@@ -56,6 +57,9 @@ export const DesktopNavigation = () => {
           </li>
 
           {displaySignInTrigger()}
+          <li className="navigation-tabs-item">
+            {/* <CartSideBar isOpen="false" /> */}
+          </li>
         </ul>
       </nav>
     </>

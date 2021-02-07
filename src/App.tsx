@@ -1,16 +1,14 @@
 import "./shared/css/global.scss";
-import { Routes } from "./routes/Routes";
-import { Navigation } from "./components/navigation/Navigation";
 import { UserProvider } from "./shared/provider/UserProvider";
+import { Routes } from "./routes/Routes";
+
 
 
 
 function App() {
   return (
     <UserProvider>
-      <Routes>
-        <Navigation />
-      </Routes>
+      <Routes />
     </UserProvider>
   );
 }
