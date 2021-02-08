@@ -4,7 +4,7 @@ import { SideBar } from "./sidebar/SideBar";
 import { useState } from "react";
 
 import { BackDrop } from "../../backdrop/BackDrop";
-import { CartTrigger } from "../../shop/carttrigger/CartTrigger";
+// import { CartTrigger } from "../../shop/carttrigger/CartTrigger";
 
 export const MobileNavigation = () => {
   const [openDrawer, setOpenDrawer] = useState<boolean>(false);
@@ -14,7 +14,7 @@ export const MobileNavigation = () => {
         <HamburgerButton drawerHandler={setOpenDrawer} />
         <SideBar drawIsOpen={openDrawer} drawerHandler={setOpenDrawer} />
         {!openDrawer || <BackDrop drawHandler={setOpenDrawer} />}
-       {/*  <CartTrigger /> */}
+        {/* <CartTrigger /> */}
       </nav>
     </>
   );

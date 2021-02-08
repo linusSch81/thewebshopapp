@@ -1,26 +1,25 @@
+import { TestApi } from "../../components/test/testapi/TestApi";
+
 export const ShopView = () => {
   return (
     <div className="view">
+      <TestApi />
       <h1>Shop</h1>
-      <p>/** NOTES */</p>
-      <p>
-        /** Sale (REA varor) - Show products (maybe have a category view for
-        this e.g 'ShopSaleView') */
-      </p>
-      <p>
-        /** New (Nyehter) - Show products (maybe have a category view for this
-        e.g 'ShopNewView') */
-      </p>
+      <p> * NOTES * </p>
+      <p> * Sale (REA varor) - Show products (maybe have a category view for
+        this e.g 'ShopSaleView') * </p>
+      <p> * New (Nyehter) - Show products (maybe have a category view for this
+        e.g 'ShopNewView') * </p>
       <hr />
       [COMPONENT: product]
       <ul>
-        <li>/** image */</li>
-        <li>/** Add to cart */</li>
-        <li>/** Link to productView */</li>
+        <li> * image * </li>
+        <li> * Add to cart * </li>
+        <li> * Link to productView * </li>
       </ul>
-      <p>/** */</p>
-      <p>/** */</p>
-      <p>/** */</p>
+      <p> * * </p>
+      <p> * * </p>
+      <p> * * </p>
       <p>
         Morbi et faucibus justo. Donec ut mi aliquam, ultricies arcu vel,
         vehicula risus. Donec at ipsum eget felis tempor feugiat eu non risus.

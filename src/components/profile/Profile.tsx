@@ -4,7 +4,8 @@ import "./Profile.scss";
 import {ProfileDropDown} from "./profiledropdown/ProfileDropDown"
 export const Profile = (props: {layout?: string}) => {
   /** useContext makes it global, otherwise useState can be used instead */
-  const [authenticatedUser, setAuthenticatedUser] = useContext(UserContext);
+  // const [authenticatedUser, setAuthenticatedUser] = useContext(UserContext);
+  const [authenticatedUser, ] = useContext(UserContext);
   return authenticatedUser ? (
     
     <div className={props.layout ? ("profile-" + props.layout + "-wrap profile-wrap") : "profile-wrap"}>

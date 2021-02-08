@@ -4,8 +4,8 @@ import { UserContext } from "../shared/provider/UserProvider";
 import RoutingPath from "./RoutingPath";
 
 /** Above and under VIEWS */
-import {DomStart} from "../components/domstart/DomStart"
-import {DomEnd} from "../components/domend/DomEnd"
+import { DomStart } from "../components/domstart/DomStart";
+import { DomEnd } from "../components/domend/DomEnd";
 
 /** VIEWS */
 import { NotFoundView } from "../view/NotFoundView";
@@ -31,9 +31,19 @@ export const Routes = () => {
   /** Make it so that the user is still logged in when they return */
   const [authenticatedUser, setAuthenticatedUser] = useContext(UserContext);
 
+  /** Block / Allow view components based on if Authinticated User or regular visitor */
+
+  const setRouteComponentIfAuthenticated = (
+    userComponent: React.FC,
+    visitorComponent: React.FC
+  ) => {
+    return authenticatedUser ? userComponent : visitorComponent;
+  };
+
   useEffect(() => {
     /** Added if statement because when localStorage is empty in the browser it gets 'null'(and not undefined) value which returns TRUE (undefined would return false) */
     if (localStorage.getItem("user")) {
+      
       // setAuthenticatedUser(localStorage.getItem("user"));
       setAuthenticatedUser({ username: localStorage.getItem("user") });
     }
@@ -48,14 +58,24 @@ export const Routes = () => {
       <Switch>
         <Route exact path={RoutingPath.homeView} component={HomeView} />
         <Route exact path={RoutingPath.aboutView} component={AboutView} />
-        <Route exact path={RoutingPath.signInView} component={SignInView} />
+        <Route
+          exact
+          path={RoutingPath.signInView}
+          component={setRouteComponentIfAuthenticated(
+            UserProfileView,
+            SignInView
+          )}
+        />
 
         <Route exact path={RoutingPath.newsView} component={NewsView} />
         <Route exact path={RoutingPath.shopView} component={ShopView} />
         <Route
           exact
           path={RoutingPath.userProfileView}
-          component={UserProfileView}
+          component={setRouteComponentIfAuthenticated(
+            UserProfileView,
+            SignInView
+          )}
         />
 
         <Route
@@ -71,9 +91,11 @@ export const Routes = () => {
         />
         <Route exact path={RoutingPath.productView} component={ProductView} />
 
-        <Route exact path={RoutingPath.backPacksView} component={BackPacksView} />
-        
-
+        <Route
+          exact
+          path={RoutingPath.backPacksView}
+          component={BackPacksView}
+        />
 
         {/** DEVELOPMENT and TEST VIEWS */}
         <Route exact path={RoutingPath.testView} component={TestView} />

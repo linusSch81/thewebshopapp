@@ -8,7 +8,7 @@ export const CartSideBar = (props: { isOpen: boolean }) => {
     <>
       {/* <CartTrigger /> */}
       <div className={props.isOpen ? "open" : "closed"}>
-        <p>/** Offcanvas side bar */</p>
+        <p> * Offcanvas side bar * </p>
         /** List added to cart items ("ShopItem" / "Cart Item")*/
         <ul>
           <li>Image</li>

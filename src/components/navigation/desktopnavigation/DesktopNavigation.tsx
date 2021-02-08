@@ -16,7 +16,7 @@ import { MenuPrimaryItems } from "../menuprimaryitems/MenuPrimaryItems";
 
 import { SignOutTrigger } from "../../signouttrigger/SignOutTrigger";
 
-import { CartSideBar } from "../../../components/shop/cartsidebar/CartSideBar";
+// import { CartSideBar } from "../../../components/shop/cartsidebar/CartSideBar";
 
 export const DesktopNavigation = () => {
   const history = useHistory();

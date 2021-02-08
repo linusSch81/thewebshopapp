@@ -89,11 +89,9 @@ export const HomeView = () => {
       {/* <li className="navigation-tabs-item" className="navigation-tabs-trigger">{authenticatedUser?.username}</li> */}
 
       <h2>TODO</h2>
-      <p>/** Add shopping cart with offcanvas toggle like mobile menu */</p>
-      <p>
-        /** When adding to cart from e.g productView add count to shopping cart
-        icon */
-      </p>
+      <p> * Add shopping cart with offcanvas toggle like mobile menu * </p>
+      <p> * When adding to cart from e.g productView add count to shopping cart
+        icon * </p>
     </div>
   );
 };

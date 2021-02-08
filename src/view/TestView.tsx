@@ -19,8 +19,8 @@ export const TestView = () => {
   const [testValue, setTestValue] = useState("Default value");
 
   /** Testing the React UserContext */
-  const [authenticatedUser, setAuthenticatedUser] = useContext(UserContext);
-
+  // const [authenticatedUser, setAuthenticatedUser] = useContext(UserContext);
+  const [authenticatedUser, ] = useContext(UserContext);
   /** Testing the React useEffect */
   const [number, setNumber] = useState(0);
 
