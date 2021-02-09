@@ -1,9 +1,6 @@
-import { TestApi } from "../../components/test/testapi/TestApi";
-
 export const ShopView = () => {
   return (
     <div className="view">
-      <TestApi />
       <h1>Shop</h1>
       <p> * NOTES * </p>
       <p> * Sale (REA varor) - Show products (maybe have a category view for

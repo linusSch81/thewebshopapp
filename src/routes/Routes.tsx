@@ -21,8 +21,14 @@ import { SubCategoryView } from "../view/subcategory/SubCategoryView";
 import { ProductView } from "../view/product/ProductView";
 /**/
 import { BackPacksView } from "../view/backpacks/BackPacksView";
+/** TEST VIEWS*/
+import { TestView } from "../view/test/TestView";
+import { TestApi1View } from "../view/test/TestApi1View";
+import { TestApi2View } from "../view/test/TestApi2View";
+import { TestApi3View } from "../view/test/TestApi3View";
+import { TestApi4View } from "../view/test/TestApi4View";
+
 /**/
-import { TestView } from "../view/TestView";
 import { AccessoriesView } from "../view/navigationtabsviews/accessories/AccessoriesView";
 import { BrandsView } from "../view/navigationtabsviews/brands/BrandsView";
 import { ExpertiseView } from "../view/navigationtabsviews/expertise/ExpertiseView";
@@ -41,9 +47,10 @@ export const Routes = () => {
   };
 
   useEffect(() => {
-    /** Added if statement because when localStorage is empty in the browser it gets 'null'(and not undefined) value which returns TRUE (undefined would return false) */
+    /** Added if statement because when localStorage is empty in the browser it gets 'null' (and not undefined) value which returns TRUE (undefined would return false).
+     * Empty object returns undefined which is TRUE compared to a empty string which returns NULL which is FALSE
+     */
     if (localStorage.getItem("user")) {
-      
       // setAuthenticatedUser(localStorage.getItem("user"));
       setAuthenticatedUser({ username: localStorage.getItem("user") });
     }
@@ -77,18 +84,14 @@ export const Routes = () => {
             SignInView
           )}
         />
-
         <Route
           exact
           path={RoutingPath.departmentView}
           component={DepartmentView}
         />
+
         <Route exact path={RoutingPath.categoryView} component={CategoryView} />
-        <Route
-          exact
-          path={RoutingPath.subCategoryView}
-          component={SubCategoryView}
-        />
+        <Route exact path={RoutingPath.subCategoryView} component={SubCategoryView} />
         <Route exact path={RoutingPath.productView} component={ProductView} />
 
         <Route
@@ -99,6 +102,13 @@ export const Routes = () => {
 
         {/** DEVELOPMENT and TEST VIEWS */}
         <Route exact path={RoutingPath.testView} component={TestView} />
+        <Route exact path={RoutingPath.testApi1View} component={TestApi1View} />
+        <Route exact path={RoutingPath.testApi2View} component={TestApi2View} />
+        <Route exact path={RoutingPath.testApi3View} component={TestApi3View} />
+        <Route exact path={RoutingPath.testApi4View} component={TestApi4View} />
+
+        {/** / DEVELOPMENT and TEST VIEWS  */}
+
         <Route
           exact
           path={RoutingPath.accessoriesView}

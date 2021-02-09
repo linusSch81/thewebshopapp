@@ -22,7 +22,19 @@ export const HomeView = () => {
       <strong>Test links</strong>
       <ul>
         <li>
-          <Link to={RoutingPath.testView}>Test</Link>
+          <Link to={RoutingPath.testView}>TestView</Link>
+        </li>
+        <li>
+          <Link to={RoutingPath.testApi1View}>Test API 1</Link>
+        </li>
+        <li>
+          <Link to={RoutingPath.testApi2View}>Test API 2</Link>
+        </li>
+        <li>
+          <Link to={RoutingPath.testApi3View}>Test API 3</Link>
+        </li>
+        <li>
+          <Link to={RoutingPath.testApi4View}>Test API 4</Link>
         </li>
       </ul>
 
@@ -76,22 +88,13 @@ export const HomeView = () => {
         </li>
       </ul>
 
-      {/* <li className="navigation-tabs-item">
-        <Link to={RoutingPath.categoryView} className="navigation-tabs-trigger">Category</Link>
-      </li>
- */}
-      {/* <li className="navigation-tabs-item">
-        <Link to={RoutingPath.productView} className="navigation-tabs-trigger">Product</Link>
-      </li> */}
-      {/* <li className="navigation-tabs-item">
-        <Link to={RoutingPath.subCategoryView} className="navigation-tabs-trigger">Sub Category</Link>
-      </li> */}
-      {/* <li className="navigation-tabs-item" className="navigation-tabs-trigger">{authenticatedUser?.username}</li> */}
-
       <h2>TODO</h2>
       <p> * Add shopping cart with offcanvas toggle like mobile menu * </p>
-      <p> * When adding to cart from e.g productView add count to shopping cart
-        icon * </p>
+      <p>
+        {" "}
+        * When adding to cart from e.g productView add count to shopping cart
+        icon *{" "}
+      </p>
     </div>
   );
 };

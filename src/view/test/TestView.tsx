@@ -1,4 +1,4 @@
-import { Greeting } from "../components/greeting/Greeting";
+import { Greeting } from "../../components/greeting/Greeting";
 
 /** React State Hook (useState): https://reactjs.org/docs/hooks-state.html */
 /** @useState: used for saving and updating variables, @useContext */
@@ -9,7 +9,7 @@ import { useEffect } from "react";
 
 /** useContext React Hook: https://reactjs.org/docs/hooks-reference.html#usecontext */
 import { useContext } from "react";
-import { UserContext } from "../shared/provider/UserProvider";
+import { UserContext } from "../../shared/provider/UserProvider";
 
 /** React Context (createContext): https://reactjs.org/docs/context.html */
 // import { createContext } from "react";
@@ -53,7 +53,7 @@ export const TestView = () => {
       <p>
         <button
           onClick={() => setTestValue("ran setTestValue")}
-          className="clickable"
+          className="button clickable"
         >
           Update a set value (onClick)
         </button>
@@ -68,7 +68,7 @@ export const TestView = () => {
       <h2>UserContext</h2>
 
       <button
-        className="clickable"
+        className="button clickable"
         onClick={() => {
           console.log(authenticatedUser);
         }}
@@ -92,7 +92,7 @@ export const TestView = () => {
       </ul>
 
       <h3>@number: {number}</h3>
-      <button onClick={() => setNumber(number + 1)} className="clickable">
+      <button onClick={() => setNumber(number + 1)} className="button clickable">
         Increment with @setNumber
       </button>
 
