@@ -1,0 +1,194 @@
+@import "../../../shared/css/variables";
+.cart-sidebar {
+  background-color: $color-white;
+  overflow: auto;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  right: 0;
+  width: 90vw;
+  max-width: 45rem;
+  height: 100vh;
+  display: flex;
+  flex-flow: nowrap column;
+  justify-content: space-between;
+  align-items: stretch;
+  transition: transform 0.25s ease-out;
+
+  &-header {
+    background: $color-light-1;
+    border-bottom: 2px solid $color-light-2;
+    padding: $leading-0-5 $leading-1;
+    text-align: center;
+  }
+  &-title {
+    display: inline-block;
+    vertical-align: middle;
+    font-family: $font-family-heading;
+    font-weight: $font-weight-heading;
+    text-transform: $text-transform-heading;
+    font-size: $font-size-large-3;
+    line-height: $line-height-large-3;
+    margin: 0 $leading-0-25;
+    padding: $leading-0-5 $leading-0-25;
+  }
+  &-body {
+    display: block;
+    overflow: auto;
+    flex: 1 1 auto;
+  }
+  &-footer {
+    background: $color-light-1;
+    border-top: 2px solid $color-light-2;
+    padding: $leading-0-5 $leading-1 $leading-1 $leading-1;
+  }
+  &-closed{
+    transform: translateX(100%);
+  }
+  &-open{
+    transform: translateX(0);
+  }
+  
+}
+
+.cart-sidebar-list {
+  display: block;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.cart-sidebar-item {
+  padding: $leading-0-5 $leading-1;
+  border-bottom: 2px dashed $color-light-2;
+  display: flex;
+  flex-flow: wrap row;
+  justify-content: space-between;
+  &-image {
+    width: 25%;
+    overflow: hidden;
+    flex: 1 1 auto;
+    margin: 0 0 $leading-0-5 0;
+    &-img {
+      vertical-align: bottom;
+      width: 100%;
+      min-height: 100%;
+      /* object-fit:contain; */
+      object-fit: cover;
+      object-position: 50% 0;
+    }
+  }
+  &-text {
+    flex: 1 1 auto;
+    padding-left: $leading-0-5;
+    display: flex;
+    flex-flow: wrap row;
+    justify-content: stretch;
+    align-content: center;
+  }
+  &-info {
+    flex: 1 1 auto;
+  }
+  &-title {
+    display: inline-block;
+    vertical-align: middle;
+    font-family: $font-family-heading;
+    font-weight: $font-weight-heading;
+    text-transform: $text-transform-heading;
+    font-size: $font-size-large-1;
+    line-height: $line-height-large-1;
+  }
+  &-quantity {
+    width: 100%;
+    text-align: center;
+  }
+  &-price {
+    text-align: right;
+    color: $color-price;
+  }
+}
+
+.form-quantity {
+  display: inline-block;
+  margin: 0 auto;
+  background-color: $color-white;
+  border: 1px solid rgba($color-black, 0.12);
+  width: 10em;
+  max-width: 100%;
+  overflow: hidden;
+  &-inner {
+    display: flex;
+    flex-flow: nowrap row;
+    justify-content: space-between;
+    width: 100%;
+  }
+  &-trigger {
+    display: inline-block;
+    padding: 0;
+    margin: 0;
+    border: none;
+    outline: none;
+
+    width: 2em;
+    flex: none;
+    background-color: $color-white;
+    box-shadow: 0 0 0 1px rgba($color-black, 0.12);
+    &-icon {
+      font-family: $font-family-body-bold;
+      font-weight: $font-weight-body-bold;
+    }
+  }
+  &-trigger:hover,
+  &-trigger:focus {
+    background-color: $color-accent;
+    border-color: $color-accent-dark;
+    color: $color-white;
+    box-shadow: none;
+  }
+
+  &-input-wrap {
+    flex: 1 1 auto;
+  }
+  &-input {
+    width: 100%;
+    background-color: transparent;
+    border-color: transparent;
+    text-align: center;
+  }
+  &-input::-webkit-inner-spin-button,
+  &-input::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+  }
+}
+
+.cart-sidebar-sum {
+  &-list {
+    display: block;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  &-item {
+    display: block;
+    padding: 0.187em 0;
+    margin: 0;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+  }
+}
+
+.cart-sidebar-total {
+  font-weight: bold;
+  font-size: 1.25em;
+}
+.cart-sidebar-total .cart-sidebar-sum-key {
+  text-transform: uppercase;
+}
+.cart-sidebar-nav {
+  text-align: center;
+  padding: $leading-1 0 0 0;
+}
+.cart-sidebar-checkout-trigger {
+  margin: auto;
+}

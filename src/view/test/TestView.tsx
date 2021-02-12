@@ -20,17 +20,17 @@ export const TestView = () => {
 
   /** Testing the React UserContext */
   // const [authenticatedUser, setAuthenticatedUser] = useContext(UserContext);
-  const [authenticatedUser, ] = useContext(UserContext);
+  const [authenticatedUser,] = useContext(UserContext);
   /** Testing the React useEffect */
   const [number, setNumber] = useState(0);
 
   useEffect(() => {
     console.log("TestView: useEffect 'effect': You are loading the view");
     return () => {
-      console.log("TestView: useEffect 'cleanup': You are leaving the view");
+      console.log("TestView: useEffect 'cleanup': You are leaving the view by navigating to another view or input has triggered the useEffect again");
     };
-    // }, [number])
-  }, []);
+  }, [number]);
+  //  }, []);
 
   return (
     <div className="view">
@@ -92,7 +92,10 @@ export const TestView = () => {
       </ul>
 
       <h3>@number: {number}</h3>
-      <button onClick={() => setNumber(number + 1)} className="button clickable">
+      <button
+        onClick={() => setNumber(number + 1)}
+        className="button clickable"
+      >
         Increment with @setNumber
       </button>
 

@@ -6,6 +6,8 @@ export const TestApi1 = () => {
    *  - Pokemon: https://pokeapi.co/
    *  - Star Wars: https://swapi.dev/
    *    - https://swapi.dev/api/people/1/
+   *  - Chuck Norris: https://api.chucknorris.io/
+   *  - Cocktails: https://www.thecocktaildb.com/api.php
    *
    * CRUD operator (Create Read Update Delete)
    * - Axios.post = send date

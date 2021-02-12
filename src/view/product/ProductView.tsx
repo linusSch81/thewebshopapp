@@ -1,3 +1,11 @@
+/** 
+ * API Demo, use: FakeStoreAPI: https://fakestoreapi.com/  ( https://github.com/keikaavousi/fake-store-api )
+ * PRODUCTS e.g: 
+ * - https://fakestoreapi.com/products
+ * - https://fakestoreapi.com/products/1
+ * - https://fakestoreapi.com/products/category/men%20clothing
+ */
+
 
 export const ProductView = () => {
 	return (

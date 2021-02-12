@@ -95,6 +95,14 @@ export const HomeView = () => {
         * When adding to cart from e.g productView add count to shopping cart
         icon *{" "}
       </p>
+
+      <h2>HomeView TODO</h2>
+      <ol>
+        <li>New items</li>
+        <li>Popular items</li>
+        
+      </ol>
+
     </div>
   );
 };

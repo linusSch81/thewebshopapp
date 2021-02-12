@@ -16,8 +16,6 @@ import { MenuPrimaryItems } from "../menuprimaryitems/MenuPrimaryItems";
 
 import { SignOutTrigger } from "../../signouttrigger/SignOutTrigger";
 
-// import { CartSideBar } from "../../../components/shop/cartsidebar/CartSideBar";
-
 export const DesktopNavigation = () => {
   const history = useHistory();
 
@@ -55,11 +53,7 @@ export const DesktopNavigation = () => {
               <MenuPrimaryItems />
             </ul>
           </li>
-
           {displaySignInTrigger()}
-          <li className="navigation-tabs-item">
-            {/* <CartSideBar isOpen="false" /> */}
-          </li>
         </ul>
       </nav>
     </>
