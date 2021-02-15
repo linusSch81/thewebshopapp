@@ -1,10 +1,13 @@
 import { useState } from "react";
 import "./CartSideBar.scss";
-export const CartSideBar = (props: { openCart?: boolean; }) => {
-  //const [openCart, setOpenCart] = useState<boolean>(false);
+import { CartSideBarItem } from "../cartsidebaritem/CartSideBarItem";
+export const CartSideBar = (props: {
+  openCart?: boolean;
+  setOpenCart: Function;
+}) => {
   return (
     <>
-      <form
+      <div
         className={
           props.openCart
             ? "cart-sidebar cart-sidebar-open"
@@ -13,61 +16,16 @@ export const CartSideBar = (props: { openCart?: boolean; }) => {
       >
         <div className="cart-sidebar-header">
           <strong className="cart-sidebar-title">Shopping cart</strong>
-          <button className="cart-close-trigger">Continue shopping</button>
+          <button
+            className="cart-close-trigger button"
+            onClick={() => props.setOpenCart()}
+          >
+            Continue shopping
+          </button>
         </div>
         <div className="cart-sidebar-body">
           <ul className="cart-sidebar-list">
-            <li className="cart-sidebar-item">
-              <div className="cart-sidebar-item-image">
-                <img
-                  src="https://picsum.photos/400"
-                  alt=""
-                  className="cart-sidebar-item-image-img"
-                />
-              </div>
-              <div className="cart-sidebar-item-text">
-                <div className="cart-sidebar-item-info">
-                  <label
-                    className="cart-sidebar-item-title"
-                    // for="inputnumber"
-                  >
-                    Title
-                  </label>
-                  <div className="cart-sidebar-item-desc">Blue</div>
-                </div>
-                <div className="cart-sidebar-item-price">2 000 kr</div>
-                <div className="cart-sidebar-item-quantity">
-                  <div className="form-quantity">
-                    <div className="form-quantity-inner">
-                      <button
-                        type="button"
-                        className="form-quantity-trigger form-quantity-remove"
-                        aria-label="Remove one item"
-                      >
-                        <span className="form-quantity-trigger-icon">-</span>
-                      </button>
-                      <span className="form-quantity-input-wrap">
-                        <input
-                          type="number"
-                          min="0"
-                          pattern="[0-9]*"
-                          placeholder="Quantity"
-                          id="inputnumber"
-                          className="form-quantity-input"
-                        />
-                      </span>
-                      <button
-                        type="button"
-                        className="form-quantity-trigger form-quantity-add"
-                        aria-label="Add one item"
-                      >
-                        <span className="form-quantity-trigger-icon">+</span>
-                      </button>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </li>
+            <CartSideBarItem />
           </ul>
         </div>
         <div className="cart-sidebar-footer">
@@ -96,7 +54,7 @@ export const CartSideBar = (props: { openCart?: boolean; }) => {
             </button>
           </div>
         </div>
-      </form>
+      </div>
     </>
   );
 };

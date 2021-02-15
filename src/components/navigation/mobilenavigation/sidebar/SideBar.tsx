@@ -3,14 +3,14 @@ import { MenuPrimaryItems } from "../../menuprimaryitems/MenuPrimaryItems";
 import {Profile} from "../../../profile/Profile"
 
 export const SideBar = (props: {
-  drawIsOpen: boolean;
-  drawerHandler: Function;
-  // drawerHandler: (handler: boolean) => void; /** Hårdtypad */
+  isOpen: boolean;
+  openHandler: Function;
+  // setOpenDrawer: (handler: boolean) => void; /** Hårdtypad */
 }) => {
   return (
     <div
       className={
-        props.drawIsOpen ? "sidebar sidebar-open" : "sidebar sidebar-closed"
+        props.isOpen ? "sidebar sidebar-open" : "sidebar sidebar-closed"
       }
     >
       <Profile layout="mobile" />
@@ -19,7 +19,7 @@ export const SideBar = (props: {
       </ul>
       
       <button
-        onClick={() => props.drawerHandler(false)}
+        onClick={() => props.openHandler(false)}
         className="sidebar-close-trigger button"
       >
         Close

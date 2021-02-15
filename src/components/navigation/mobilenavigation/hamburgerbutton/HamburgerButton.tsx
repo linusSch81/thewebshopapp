@@ -1,12 +1,12 @@
 import "./HamburgerButton.scss";
 
 export const HamburgerButton = (props: {
-  drawerHandler: (handler: boolean) => void;
+  openHandler: (handler: boolean) => void;
 }) => {
   return (
     <button
       className="hamburger-button"
-      onClick={() => props.drawerHandler(true)}
+      onClick={() => props.openHandler(true)}
     >
       <div></div>
       <div></div>

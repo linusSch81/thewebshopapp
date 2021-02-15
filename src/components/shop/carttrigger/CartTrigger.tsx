@@ -1,3 +1,4 @@
+import "./CartTrigger.scss"
 export const CartTrigger = (props: { count?: any;setOpenCart: Function;}) => {
   const countStr: string = props.count >= 1 ? `(${props.count})` : "";
   const countLabel: string = countStr
