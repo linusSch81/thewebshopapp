@@ -6,13 +6,11 @@
  * - https://fakestoreapi.com/products/category/men%20clothing
  */
 
-import { ProductList } from "../../components/product/productlist/ProductList";
-export const ProductView = () => {
-  return (
-    <div className="view">
-      <h1>Product</h1>
-      {/* <p> * Show the actual product item * </p> */}
-      <ProductList />
-    </div>
-  );
-};
+import axios from "axios";
+
+const URL = "https://fakestoreapi.com";
+const ProductAPI = axios.create({
+  baseURL: URL,
+});
+
+export default ProductAPI;

@@ -4,12 +4,12 @@ const getDataLuke = () => {
   return http.get("/people/1");
 };
 
-const getStartWarsCharacter = (characterNumber: number) => {
+const getStarWarsCharacter = (characterNumber: number) => {
   return http.get(`/people/${characterNumber}`);
 };
 /* export default {	*/
 const logger = {
   getDataLuke,
-  getStartWarsCharacter,
+  getStarWarsCharacter,
 };
 export default logger;

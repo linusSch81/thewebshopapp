@@ -1,4 +1,3 @@
-import { useState } from "react";
 import "./CartSideBar.scss";
 import { CartSideBarItem } from "../cartsidebaritem/CartSideBarItem";
 export const CartSideBar = (props: {

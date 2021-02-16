@@ -7,7 +7,7 @@ export const TestApi2 = () => {
 
   const getDataFromStarWarsAPI = async () => {
     try {
-      const response = await StarWarsAPIService.getStartWarsCharacter(
+      const response = await StarWarsAPIService.getStarWarsCharacter(
         characterCount
       );
       setStarWarsData(response);

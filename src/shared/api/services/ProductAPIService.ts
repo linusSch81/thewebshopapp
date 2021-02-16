@@ -5,14 +5,14 @@
  * - https://fakestoreapi.com/products/1
  * - https://fakestoreapi.com/products/category/men%20clothing
  */
+import http from "../ProductAPI";
 
-import { ProductList } from "../../components/product/productlist/ProductList";
-export const ProductView = () => {
-  return (
-    <div className="view">
-      <h1>Product</h1>
-      {/* <p> * Show the actual product item * </p> */}
-      <ProductList />
-    </div>
-  );
+const getDataProductsFromCategory = (productCategory: string) => {
+  return http.get(`/products/category/${productCategory}`);
 };
+
+/* export default {	*/
+const logger = {
+  getDataProductsFromCategory,
+};
+export default logger;

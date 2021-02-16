@@ -5,7 +5,11 @@ export const AboutView = () => {
       <p>
         Bagstar is a fictitious company. This site is a web shop project,
         created in the framework React and node.js for the course JavaScript
-        fullstack at Campus Mölndal Yrkeshögskola (Higher Vocational Education)
+        fullstack at{" "}
+        <a href="https://www.molndal.se/campus-molndal/">
+          Campus Mölndal Yrkeshögskola
+        </a>{" "}
+        (Higher Vocational Education)
       </p>
 
       <h2>Synopsis</h2>
