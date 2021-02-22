@@ -12,7 +12,7 @@ export const ProductItem = (props: {
   const priceStr = `${props.price} kr`;
   const imageStr = props.image;
   return (
-    <li key={props.id} className="product-item">
+    <li key={"product" + props.id} className="product-item">
       <div className="product-item-image">
         {imageStr ? (
           <Image
@@ -31,7 +31,7 @@ export const ProductItem = (props: {
         </div>
         <div className="product-item-price">{priceStr}</div>
         <div className="product-item-quantity">
-          <FormQuantitly />
+          <FormQuantitly productId={props.id} />
         </div>
       </div>
     </li>

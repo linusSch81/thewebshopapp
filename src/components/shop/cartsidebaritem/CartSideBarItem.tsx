@@ -23,7 +23,7 @@ export const CartSideBarItem = () => {
         </div>
         <div className="cart-sidebar-item-price">2 000 kr</div>
         <div className="cart-sidebar-item-quantity">
-          <FormQuantitly />
+          <FormQuantitly productId={0}  />
         </div>
       </div>
     </li>

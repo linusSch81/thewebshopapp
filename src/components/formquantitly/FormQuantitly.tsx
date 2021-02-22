@@ -1,12 +1,22 @@
 import "./FormQuantitly.scss";
-import { useContext } from "react";
+import { useContext, useState } from "react";
 import { CartContext } from "../../shared/provider/CartProvider";
 
-export const FormQuantitly = () => {
+export const FormQuantitly = (props:{productId:number}) => {
   const [cartItems, setCartItems] = useContext(CartContext);
+  const [quantityCount,setQuantityCount] = useState<number>(0);
+/* console.log(cartItems) */
+console.log(props.productId)
+console.log(cartItems.products)
+
+/* check if @productId is in @$cartItems */
+
+/* setQuantityCount if in cartItem */
+
+/* Input onchange update cartItem */
 
   const removeHandler = () => {
-    cartItems <= 0 ? setCartItems(0) : setCartItems(cartItems - 1);
+    quantityCount <= 0 ?setQuantityCount(0) :setQuantityCount(quantityCount - 1);
   };
 
   return (
@@ -28,9 +38,9 @@ export const FormQuantitly = () => {
             placeholder="Quantity"
             // id="inputnumber"
             className="form-quantity-input"
-            value={cartItems}
+            value={quantityCount}
             onChange={(event) => {
-              setCartItems(parseInt(event.target.value, 10));
+             setQuantityCount(parseInt(event.target.value, 10));
             }}
           />
         </span>
@@ -38,7 +48,7 @@ export const FormQuantitly = () => {
           type="button"
           className="form-quantity-trigger form-quantity-add"
           aria-label="Add one item"
-          onClick={() => setCartItems(cartItems + 1)}
+          onClick={() =>setQuantityCount(quantityCount + 1)}
         >
           <span className="form-quantity-trigger-icon">+</span>
         </button>
