@@ -1,10 +1,22 @@
 import http from "../BackendAPI";
-import {iCreateNewUser} from "../../interface/interface"
+import { iCreateNewUser } from "../../interface/interface";
 
 const createUser = (data: iCreateNewUser) => {
-  return http.post("/user/", data);
+	return http.post("/user/", data);
+};
+
+const getAllUsers = () => {
+	return http.get("/user");
+};
+
+const deleteUser = (_id: string) => {
+	console.log(`/user/${_id}`)
+	return http.delete(`/user/${_id}`);
+
 };
 
 export default {
-	createUser
+	createUser,
+	getAllUsers,
+	deleteUser
 };
