@@ -54,6 +54,18 @@ export const HomeView = () => {
           <li>
             <Link to={RoutingPath.testApi4View}>Test API 4</Link>
           </li>
+          <li>
+            <Link to={RoutingPath.testApi5View}>Test API 5</Link>
+          </li>
+          <li>
+            <Link to={RoutingPath.testApi6View}>Test API 6</Link>
+          </li>
+          <li>
+            <Link to={RoutingPath.testApi7View}>Test API 7</Link>
+          </li>
+          <li>
+            <Link to={RoutingPath.testApiBackendView}>Test API Backend (server)</Link>
+          </li>
         </ul>
 
         <h2>Possible Future upscaling</h2>

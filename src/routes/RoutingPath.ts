@@ -17,37 +17,51 @@ const testView = "/test";
 const testApi1View = "/test-api-1";
 const testApi2View = "/test-api-2";
 const testApi3View = "/test-api-3";
+
 const testApi4View = "/test-api-4";
+const testApi4DetailsView = (name?: string) => {
+	//return name ? `/pokemon/${name}` : "/pokemon/:name";
+	return name ? `${testApi4View}/${name}` : "/:testApi4View/:name";
+};
+
+const testApi5View = "/test-api-5";
+const testApi6View = "/test-api-6";
+const testApi7View = "/test-api-7";
+const testApiBackendView = "/test-api-backend";
 
 const accessoriesView = "/accessories";
 const brandsView = "/brands";
 const expertiseView = "/expertise";
 
-/* export default { */
 const logger = {
-  homeView,
-  aboutView,
-  signInView,
+	homeView,
+	aboutView,
+	signInView,
 
-  newsView,
-  shopView,
+	newsView,
+	shopView,
 
-  userProfileView,
-  departmentView,
-  categoryView,
-  subCategoryView,
-  productView,
+	userProfileView,
+	departmentView,
+	categoryView,
+	subCategoryView,
+	productView,
 
-  backPacksView,
+	backPacksView,
 
-  testView,
-  testApi1View,
-  testApi2View,
-  testApi3View,
-  testApi4View,
+	testView,
+	testApi1View,
+	testApi2View,
+	testApi3View,
+	testApi4View,
+	testApi4DetailsView,
+	testApi5View,
+	testApi6View,
+	testApi7View,
+	testApiBackendView,
 
-  accessoriesView,
-  brandsView,
-  expertiseView,
+	accessoriesView,
+	brandsView,
+	expertiseView,
 };
 export default logger;

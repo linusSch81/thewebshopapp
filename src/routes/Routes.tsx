@@ -26,7 +26,14 @@ import { TestView } from "../view/test/TestView";
 import { TestApi1View } from "../view/test/TestApi1View";
 import { TestApi2View } from "../view/test/TestApi2View";
 import { TestApi3View } from "../view/test/TestApi3View";
+
 import { TestApi4View } from "../view/test/TestApi4View";
+import {TestApi4DetailsView} from "../view/test/TestApi4DetailsView"
+
+import { TestApi5View } from "../view/test/TestApi5View";
+import { TestApi6View } from "../view/test/TestApi6View";
+import { TestApi7View } from "../view/test/TestApi7View";
+import { TestApiBackendView } from "../view/test/TestApiBackendView";
 
 /**/
 import { AccessoriesView } from "../view/navigationtabsviews/accessories/AccessoriesView";
@@ -105,7 +112,14 @@ export const Routes = () => {
         <Route exact path={RoutingPath.testApi1View} component={TestApi1View} />
         <Route exact path={RoutingPath.testApi2View} component={TestApi2View} />
         <Route exact path={RoutingPath.testApi3View} component={TestApi3View} />
+        
         <Route exact path={RoutingPath.testApi4View} component={TestApi4View} />
+        <Route exact path={RoutingPath.testApi4DetailsView()} component={TestApi4DetailsView} />
+
+        <Route exact path={RoutingPath.testApi5View} component={TestApi5View} />
+        <Route exact path={RoutingPath.testApi6View} component={TestApi6View} />
+        <Route exact path={RoutingPath.testApi7View} component={TestApi7View} />
+        <Route exact path={RoutingPath.testApiBackendView} component={TestApiBackendView} />
 
         {/** / DEVELOPMENT and TEST VIEWS  */}
 

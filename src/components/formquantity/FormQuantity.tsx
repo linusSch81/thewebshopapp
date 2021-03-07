@@ -1,13 +1,13 @@
-import "./FormQuantitly.scss";
+import "./FormQuantity.scss";
 import { useContext, useState } from "react";
 import { CartContext } from "../../shared/provider/CartProvider";
 
-export const FormQuantitly = (props:{productId:number}) => {
+export const FormQuantity = (props:{productId:number}) => {
   const [cartItems, setCartItems] = useContext(CartContext);
   const [quantityCount,setQuantityCount] = useState<number>(0);
 /* console.log(cartItems) */
-console.log(props.productId)
-console.log(cartItems.products)
+// console.log(props.productId)
+// console.log(cartItems.products)
 
 /* check if @productId is in @$cartItems */
 

@@ -1,6 +1,6 @@
 import "./ProductItem.scss";
 import { Image } from "../../image/Image";
-import { FormQuantitly } from "../../formquantitly/FormQuantitly";
+import { FormQuantity } from "../../formquantity/FormQuantity";
 
 export const ProductItem = (props: {
   id: number;
@@ -31,7 +31,7 @@ export const ProductItem = (props: {
         </div>
         <div className="product-item-price">{priceStr}</div>
         <div className="product-item-quantity">
-          <FormQuantitly productId={props.id} />
+          <FormQuantity productId={props.id} />
         </div>
       </div>
     </li>

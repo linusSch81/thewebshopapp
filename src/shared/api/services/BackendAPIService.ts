@@ -10,13 +10,14 @@ const getAllUsers = () => {
 };
 
 const deleteUser = (_id: string) => {
-	console.log(`/user/${_id}`)
+	console.log(`/user/${_id}`);
 	return http.delete(`/user/${_id}`);
-
 };
 
-export default {
+const logger = {
 	createUser,
 	getAllUsers,
-	deleteUser
+	deleteUser,
 };
+
+export default logger;

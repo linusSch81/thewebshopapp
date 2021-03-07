@@ -1,6 +1,6 @@
 import "./CartSideBarItem.scss";
 import { Image } from "../../image/Image";
-import { FormQuantitly } from "../../formquantitly/FormQuantitly";
+import { FormQuantity } from "../../formquantity/FormQuantity";
 export const CartSideBarItem = () => {
   return (
     <li className="cart-sidebar-item">
@@ -23,7 +23,7 @@ export const CartSideBarItem = () => {
         </div>
         <div className="cart-sidebar-item-price">2 000 kr</div>
         <div className="cart-sidebar-item-quantity">
-          <FormQuantitly productId={0}  />
+          <FormQuantity productId={0}  />
         </div>
       </div>
     </li>
