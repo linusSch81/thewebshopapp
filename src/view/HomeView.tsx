@@ -5,7 +5,7 @@ export const HomeView = () => {
   return (
     <div className="view">
       <h1>Home View</h1>
-      <p>Lorem Ipsum...</p>
+      <p>This is the home view...</p>
       <h2>New / latest Items</h2>
       <p>Lorem Ipsum ...</p>
       <h2>Popular items</h2>

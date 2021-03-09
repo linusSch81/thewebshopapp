@@ -67,7 +67,7 @@ export const Routes = () => {
   }, []);
 
   return (
-    <BrowserRouter>
+    <BrowserRouter basename="thewebshopapp">
       <DomStart />
       <Switch>
         <Route exact path={RoutingPath.homeView} component={HomeView} />
