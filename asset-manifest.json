@@ -1,0 +1,23 @@
+{
+  "files": {
+    "main.css": "/thewebshopapp/static/css/main.c5621f91.chunk.css",
+    "main.js": "/thewebshopapp/static/js/main.bb794a73.chunk.js",
+    "main.js.map": "/thewebshopapp/static/js/main.bb794a73.chunk.js.map",
+    "runtime-main.js": "/thewebshopapp/static/js/runtime-main.d1e0b5b7.js",
+    "runtime-main.js.map": "/thewebshopapp/static/js/runtime-main.d1e0b5b7.js.map",
+    "static/js/2.6559e981.chunk.js": "/thewebshopapp/static/js/2.6559e981.chunk.js",
+    "static/js/2.6559e981.chunk.js.map": "/thewebshopapp/static/js/2.6559e981.chunk.js.map",
+    "static/js/3.41cce8c2.chunk.js": "/thewebshopapp/static/js/3.41cce8c2.chunk.js",
+    "static/js/3.41cce8c2.chunk.js.map": "/thewebshopapp/static/js/3.41cce8c2.chunk.js.map",
+    "index.html": "/thewebshopapp/index.html",
+    "static/css/main.c5621f91.chunk.css.map": "/thewebshopapp/static/css/main.c5621f91.chunk.css.map",
+    "static/js/2.6559e981.chunk.js.LICENSE.txt": "/thewebshopapp/static/js/2.6559e981.chunk.js.LICENSE.txt",
+    "static/media/logo.4c2ec011.png": "/thewebshopapp/static/media/logo.4c2ec011.png"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.d1e0b5b7.js",
+    "static/js/2.6559e981.chunk.js",
+    "static/css/main.c5621f91.chunk.css",
+    "static/js/main.bb794a73.chunk.js"
+  ]
+}
