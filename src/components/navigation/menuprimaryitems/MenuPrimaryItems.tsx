@@ -59,6 +59,11 @@ export const MenuPrimaryItems = () => {
           Shop
         </Link>
       </li>
+      <li className="navigation-tabs-item">
+        <Link to={RoutingPath.adminUsersView} className="navigation-tabs-trigger">
+          Admin
+        </Link>
+      </li>
     </>
   );
 };

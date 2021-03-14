@@ -1,54 +1,85 @@
-//import createUser from  "../../shared/api/services/BackendAPIService"
-import BackendAPIService from "../../shared/api/services/BackendAPIService";
+import BackendAPIService from "../../../../shared/api/services/BackendAPIService";
 import { useState, useEffect } from "react";
-import { iCreateNewUser } from "../../shared/interface/interface";
+import { iAdminUser } from "../../../../shared/interface/interface";
 
-import { TestApiBackend } from "../../components/test/testapibackend/TestApiBackend";
-
-export const TestApiBackendView = () => {
+export const AdminCreateUser = (props: {
+	setUsersList: Function;
+	loading: Boolean;
+	setLoading: Function;
+}) => {
 	/** form inputs */
-	const [newUser, setNewUser] = useState<iCreateNewUser>({
+
+	const { setUsersList, loading, setLoading } = props;
+	const [newUser, setNewUser] = useState<iAdminUser>({
 		username: "",
 		password: "",
 	});
 
 	/** write usersList */
-	const [usersList, setUsersList] = useState([]);
-	const [loading, setLoading] = useState(false);
+
+	const [showStatusMessage, setShowStatusMessage] = useState<boolean>(false);
+	const [formError, setFormError] = useState<boolean>(false);
 
 	const submitCreate = async () => {
 		try {
 			setLoading(true);
 			await BackendAPIService.createUser(newUser);
 			setLoading(false);
+			setFormError(false);
 		} catch (error) {
 			console.log(error);
+			setFormError(true);
 		}
-	};
-
-	const submitDelete = async (id: any) => {
-		try {
-			setLoading(true);
-			await BackendAPIService.deleteUser(id);
-			setLoading(false);
-		} catch (error) {
-			console.log(error);
-		}
+		setShowStatusMessage(true);
 	};
 
 	const fetchData = async () => {
 		const response = await BackendAPIService.getAllUsers();
 		setUsersList(response.data);
 	};
-
 	useEffect(() => {
 		fetchData();
+		// eslint-disable-next-line
 	}, [loading]);
 
-	return (
-		<div className="view">
-			<h1>Backend API</h1>
+	useEffect(() => {
+		if (!showStatusMessage) {
+			setFormError(false);
+		}
+	}, [showStatusMessage]);
 
+	const formMessage = () => {
+		if (showStatusMessage) {
+			return formError ? (
+				<div
+					style={{
+						backgroundColor: "fireBrick",
+						color: "white",
+						padding: "1em",
+						margin: "1em 0",
+					}}
+				>
+					ERROR: User can not be created. Check the form and try
+					again.
+				</div>
+			) : (
+				<div
+					style={{
+						backgroundColor: "green",
+						color: "white",
+						padding: "1em",
+						margin: "1em 0",
+					}}
+				>
+					SUCCESS: User was created.
+				</div>
+			);
+		}
+	};
+
+	return (
+		<>
+			<h2>Create user</h2>
 			<div>
 				<label>
 					<div>Username</div>
@@ -60,6 +91,7 @@ export const TestApiBackendView = () => {
 								...newUser,
 								username: event.target.value,
 							});
+							setShowStatusMessage(false);
 							// console.log(newUser);
 						}}
 					/>
@@ -70,12 +102,14 @@ export const TestApiBackendView = () => {
 				<div>Password</div>
 				<input
 					type="password"
+					autoComplete="false"
 					placeholder="Password"
 					onChange={(event) => {
 						setNewUser({
 							...newUser,
 							password: event.target.value,
 						});
+						setShowStatusMessage(false);
 						// console.log(newUser);
 					}}
 				/>
@@ -91,6 +125,7 @@ export const TestApiBackendView = () => {
 							...newUser,
 							age: parseInt(event.target.value),
 						});
+						setShowStatusMessage(false);
 						// console.log(newUser);
 					}}
 				/>
@@ -103,25 +138,7 @@ export const TestApiBackendView = () => {
 			>
 				Create user
 			</button>
-			<hr />
-			<h1>Displaying all usersList on submit</h1>
-			<ol>
-				{usersList.map((x: any) => (
-					<li key={x._id}>
-						<span>{x.username} </span>
-						<span>{x.age ? `(${x.age} years)` : ""}</span>
-						<button
-							className="button"
-							onClick={() => {
-								submitDelete(x._id);
-							}}
-						>
-							X
-						</button>
-					</li>
-				))}
-			</ol>
-			<TestApiBackend />
-		</div>
+			{formMessage()}
+		</>
 	);
 };

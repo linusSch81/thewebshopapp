@@ -3,7 +3,7 @@ html {
 }
 body {
   color: $color-text-body;
-  background-color: $color-background;
+  background-color: $color-light-2;
 }
 img {
   vertical-align: bottom;
@@ -28,7 +28,7 @@ select {
   box-shadow: none;
   background-image: none;
   border-color: $color-light-2;
-  border-color: rgba($color-foreground, 0.15);
+  border-color: rgba($color-dark-3, 0.15);
 }
 
 input[disabled]:hover,
@@ -38,7 +38,7 @@ select[disabled]:hover {
   box-shadow: none;
   background-image: none;
   border-color: $color-light-2;
-  border-color: rgba($color-foreground, 0.15);
+  border-color: rgba($color-dark-3, 0.15);
 }
 select {
   height: 2.333em;
@@ -52,7 +52,7 @@ select:hover {
   box-shadow: none;
   background-image: none;
   border-color: $color-light-2;
-  border-color: rgba($color-foreground, 0.2);
+  border-color: rgba($color-dark-3, 0.2);
 }
 input:focus,
 textarea:focus,
@@ -67,7 +67,7 @@ select[required] {
   box-shadow: none;
   background-image: none;
   border-color: $color-light-2;
-  border-color: rgba($color-foreground, 0.3);
+  border-color: rgba($color-dark-3, 0.3);
 }
 input:required:focus,
 textarea:required:focus,

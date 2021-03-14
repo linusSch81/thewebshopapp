@@ -64,7 +64,7 @@ export const HomeView = () => {
             <Link to={RoutingPath.testApi7View}>Test API 7</Link>
           </li>
           <li>
-            <Link to={RoutingPath.testApiBackendView}>Test API Backend (server)</Link>
+            <Link to={RoutingPath.adminUsersView}>Test API Backend (server) - users</Link>
           </li>
         </ul>
 

@@ -5,19 +5,20 @@ export const TestApi2 = () => {
 
   const [characterCount, setCharacterCount] = useState<any>(1);
 
-  const getDataFromStarWarsAPI = async () => {
-    try {
-      const response = await StarWarsAPIService.getStarWarsCharacter(
-        characterCount
-      );
-      setStarWarsData(response);
-    } catch (error) {
-      console.log(error);
-    }
-  };
+
 
   /** Store data in @starWarsData with useEffect @setStarWarsData */
   useEffect(() => {
+    const getDataFromStarWarsAPI = async () => {
+      try {
+        const response = await StarWarsAPIService.getStarWarsCharacter(
+          characterCount
+        );
+        setStarWarsData(response);
+      } catch (error) {
+        console.log(error);
+      }
+    };
     getDataFromStarWarsAPI();
   }, [characterCount]);
 

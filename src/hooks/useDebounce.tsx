@@ -9,17 +9,19 @@
  * - https://www.w3schools.com/jsref/met_win_cleartimeout.asp
  */
 import { useState, useEffect } from "react";
-export const useDebounce = (value: any, delay: number) => {
+export const useDebounce = (value: any, delay?: number) => {
 	const [debounceValue, setDebounceValue] = useState(value);
-
 	useEffect(() => {
+		const debounceDelay = delay ? delay : 500;
+		//const debounceDelay = 500;
 		const handler = setTimeout(() => {
 			setDebounceValue(value);
-		}, delay);
+		}, debounceDelay);
 
 		return () => {
 			clearTimeout(handler);
 		};
+		// eslint-disable-next-line
 	}, [value]);
 
 	return debounceValue;

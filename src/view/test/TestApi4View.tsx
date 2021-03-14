@@ -20,7 +20,6 @@ export const TestApi4View = () => {
 		setPokemonList(data);
 		//console.log(data);
 	};
-
 	useEffect(() => {
 		fetchData();
 	}, []);

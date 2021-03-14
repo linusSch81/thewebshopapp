@@ -1,9 +1,10 @@
 import "./FormQuantity.scss";
-import { useContext, useState } from "react";
-import { CartContext } from "../../shared/provider/CartProvider";
+import { useState } from "react";
+//import { useContext} from "react";
+//import { CartContext } from "../../shared/provider/CartProvider";
 
 export const FormQuantity = (props:{productId:number}) => {
-  const [cartItems, setCartItems] = useContext(CartContext);
+  //const [cartItems, setCartItems] = useContext(CartContext);
   const [quantityCount,setQuantityCount] = useState<number>(0);
 /* console.log(cartItems) */
 // console.log(props.productId)

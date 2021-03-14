@@ -1,44 +1,32 @@
-
-/** COLOR - BASE - (active state etc) */
 $color-base-light:	#2b96a6;
 $color-base:#237f8b;
 $color-base-dark:#1b6872;
 $color-base-darker:#135158;
 
-/** COLOR - ACCENT */
 $color-accent:	 #e67e1d;
 $color-accent-dark:#dd7211;
 
-/** COLOR - DARK SHADES - Blackish */ 
-$color-black:#000;
+$color-dark:#000;
 $color-dark-1:#0f1415;
 $color-dark-2:#161f21;
 $color-dark-3:#1f2a2b;
 
-/** COLOR - LIGHT SHADES - Whiteish */
-$color-white:#fff;
+$color-light:#fff;
 $color-light-1:#f3f4f6;
 $color-light-2:#e6eded;
 $color-light-3:#dae3e5;
 
-/** COLOR - Theme - Light- / Dark Mode (Dark text on light background or light text on dark background) */
-$color-background:$color-light-2;
-$color-foreground:$color-dark-3;
+$color-text-body:$color-dark-3;
 
-/** COLOR - TEXT BODY - (TEXT color:body text) */
-$color-text-body:$color-foreground;
-
-/** COLOR - TEXT HEADING */
 $color-text-heading:$color-dark-1;
 
-/** COLOR - LINK - (link,button,link gradient,button border) */
+$color-text-invert:$color-light;
+
 $color-link:	$color-base-dark;
 $color-link-dark:$color-base-darker;
 
-/** COLOR - PRICE - (Pricing,some titles,button,button border) */
 $color-price:	$color-text-heading;
 
-/** COLOR - WARNING ERROR */
 $color-warning:	#ee2716;
 $color-warning-dark:#e02110;
 

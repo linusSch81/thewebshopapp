@@ -11,26 +11,19 @@ export const TestApi5 = () => {
 	const [loading, setLoading] = useState<boolean>(false);
 	const [petStatus, setPetStatus] = useState<string>("available");
 
-	const fetchData = async () => {
-		setLoading(true);
-		const { data } = await PetStoreAPIService.findByStatus(petStatus);
-		setPetData(data);
-		console.log(data);
-		setLoading(false);
-	};
-
+	
 	const displayData = () => {
 		// https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/Roles/Table_Role
 		if (!loading) {
 			const displayPetData = petData.slice(0, 5);
-
+			
 			return (
 				<>
 					<div
 						role={"table"}
 						aria-label="Sold Pets"
 						aria-rowcount={5}
-					>
+						>
 						<div role="rowgroup">
 							<ul role="row">
 								<li>
@@ -49,36 +42,39 @@ export const TestApi5 = () => {
 						<ul role="rowgroup">
 							{displayPetData?.map((x: any, index: number) => (
 								<li
-									key={`petShopWidgetItem${index}`}
-									role="row"
-									aria-rowindex={index + 1}
+								key={`petShopWidgetItem${index}`}
+								role="row"
+								aria-rowindex={index + 1}
 								>
 									<div role="cell">Name: {x?.name}</div>
 									<div role="cell">ID: {x?.id}</div>
 
 									{x?.tags ? (
 										<div role="cell">
-											Tags: 
-                      <ul>
+											Tags:
+											<ul>
 												{x?.tags?.map(
 													(
 														y: any,
 														index2: number
-													) => (
-														<li
+														) => (
+															<li
 															key={`petShopWidgetItem${index}Tag${index2}`}
-														>
+															>
 															<span className="-tag">
 																{y.name}
 															</span>
 														</li>
 													)
-												)}
+													)}
 											</ul>
 										</div>
 									) : (
-										<div className="-placeholder" role="cell"></div>
-									)}
+										<div
+										className="-placeholder"
+										role="cell"
+										></div>
+										)}
 								</li>
 							))}
 						</ul>
@@ -90,14 +86,21 @@ export const TestApi5 = () => {
 	const filterHandler = (status: string) => {
 		return setPetStatus(status);
 	};
-
+	
+	const fetchData = async () => {
+		setLoading(true);
+		const { data } = await PetStoreAPIService.findByStatus(petStatus);
+		setPetData(data);
+		console.log(data);
+		setLoading(false);
+	};
 	useEffect(() => {
 		fetchData();
+		//eslint-disable-next-line
 	}, [petStatus]);
-	// https://www.w3.org/TR/2016/WD-wai-aria-practices-1.1-20160317/examples/radio/radio.html
+
 	return (
 		<section id="petShopWidget" className="petshopwidget">
-		
 			<div
 				id="petShopWidget_filter"
 				role="radiogroup"
@@ -141,8 +144,8 @@ export const TestApi5 = () => {
 							role="radio"
 							aria-checked="true"
 							tabIndex={0}
-              title="Sold Pets"
-              aria-label="Sold Pets"
+							title="Sold Pets"
+							aria-label="Sold Pets"
 						>
 							Sold
 						</strong>

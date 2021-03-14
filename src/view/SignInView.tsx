@@ -64,7 +64,7 @@ export const SignInView = () => {
     <div className="view">
       <h1>Sign in</h1>
       <h2>Login Credentials</h2>
-      <form>
+      <>
         <ul className="form-list">
           <li className="form-item">
             <input
@@ -78,6 +78,7 @@ export const SignInView = () => {
           <li className="form-item">
             <input
               type="password"
+              autoComplete="false"
               placeholder={"Password"}
               onChange={(event) => {
                 updateLoginCredential("password", event.target.value);
@@ -98,7 +99,7 @@ export const SignInView = () => {
             <button className="button" onClick={() => signIn()}>Sign in</button>
           </li>
         </ul>
-      </form>
+      </>
     </div>
   );
 };

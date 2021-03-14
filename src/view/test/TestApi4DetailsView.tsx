@@ -14,7 +14,6 @@ export const TestApi4DetailsView = () => {
 	const [data, setData] = useState<any>([]);
 	const location = useLocation<any>();
 
-	
 	const fetchData = async () => {
 		try {
 			const getPath = location.state.url;
@@ -37,6 +36,7 @@ export const TestApi4DetailsView = () => {
 	};
 	useEffect(() => {
 		fetchData();
+		// eslint-disable-next-line
 	}, []);
 
 	const displayData = () => {

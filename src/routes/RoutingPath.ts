@@ -27,7 +27,7 @@ const testApi4DetailsView = (name?: string) => {
 const testApi5View = "/test-api-5";
 const testApi6View = "/test-api-6";
 const testApi7View = "/test-api-7";
-const testApiBackendView = "/test-api-backend";
+const adminUsersView = "/admin/users";
 
 const accessoriesView = "/accessories";
 const brandsView = "/brands";
@@ -58,7 +58,7 @@ const logger = {
 	testApi5View,
 	testApi6View,
 	testApi7View,
-	testApiBackendView,
+	adminUsersView,
 
 	accessoriesView,
 	brandsView,

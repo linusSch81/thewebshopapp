@@ -3,12 +3,12 @@ $font-weight-button:600;
 $text-transform-button:none;
 $border-radius-button:0.25em;
 $color-button-base:Gray;
-$color-button-invert:white;
+$color-button-text:white;
 $color-button-base-dark:DimGray;
 /**/
-$color-button-secondary-base:GhostWhite;
-$color-button-secondary-invert:DimGray;
-$color-button-secondary-base-dark:Gainsboro;
+$color-button-invert-base:GhostWhite;
+$color-button-invert-text:DimGray;
+$color-button-invert-base-dark:Gainsboro;
 /**/
 button{
 	font:inherit;
@@ -43,24 +43,35 @@ button{
 	box-shadow:none;
 	background-image:none;
 	background-color:$color-button-base;
-	color: $color-button-invert;
+	color: $color-button-text;
 	border-color: $color-button-base-dark;
-}
-.button:hover{
-	text-shadow:none;
-	box-shadow:none;
-	background-image:none;
-	background-color:$color-button-base-dark;
-	color:$color-button-invert;
-	border-color:$color-button-base-dark;
-}
-.button:active{
-	text-shadow:none;
-	box-shadow:none;
-	background-image:none;
-	background-color: $color-button-base-dark;
-	color: $color-button-invert;
-	border-color: $color-button-base-dark;
+	&:hover{
+		text-shadow:none;
+		box-shadow:none;
+		background-image:none;
+		background-color:$color-button-base-dark;
+		color:$color-button-text;
+		border-color:$color-button-base-dark;
+	}
+	&:active{
+		text-shadow:none;
+		box-shadow:none;
+		background-image:none;
+		background-color: $color-button-base-dark;
+		color: $color-button-text;
+		border-color: $color-button-base-dark;
+	}
+	&-active,
+	&-active:hover,
+	&-active:focus,
+	&-active:active{
+		text-shadow:none;
+		box-shadow:none;
+		background-image:none;
+		background-color: $color-button-base-dark;
+		color: $color-button-text;
+		border-color: $color-button-base-dark;
+	}
 }
 
 
@@ -68,24 +79,50 @@ button{
 	text-shadow:none;
 	box-shadow:none;
 	background-image: none;
-	color:$color-button-secondary-invert;
-	background-color:$color-button-secondary-base;
-	border-color:$color-button-secondary-base-dark;
+	color:$color-button-invert-text;
+	background-color:$color-button-invert-base;
+	border-color:$color-button-invert-base-dark;
+	&:hover{
+		text-shadow:none;
+		box-shadow:none;
+		background-image: none;
+		background-color:$color-button-invert-base-dark;
+		color:$color-button-invert-text;
+		border-color:$color-button-invert-base-dark;
+	}
+	&:active,
+	&:focus{
+		text-shadow:none;
+		box-shadow:none;
+		background-image:none;
+		background-color:$color-button-invert-base-dark;
+		color:$color-button-invert-text;
+		border-color:$color-button-invert-base-dark;
+	}
 }
-.button-secondary:hover{
+
+.button-delete{
 	text-shadow:none;
 	box-shadow:none;
 	background-image: none;
-	background-color:$color-button-secondary-base-dark;
-	color:$color-button-secondary-invert;
-	border-color:$color-button-secondary-base-dark;
-}
-.button-secondary:active,
-.button-secondary:focus{
-	text-shadow:none;
-	box-shadow:none;
-	background-image:none;
-	background-color:$color-button-secondary-base-dark;
-	color:$color-button-secondary-invert;
-	border-color:$color-button-secondary-base-dark;
+	color:$color-warning;
+	background-color:$color-button-invert-base;
+	border-color:$color-warning-dark;
+	&:hover{
+		text-shadow:none;
+		box-shadow:none;
+		background-image: none;
+		background-color:$color-warning;
+		color:$color-button-text;
+		border-color:$color-warning-dark;
+	}
+	&:active,
+	&:focus{
+		text-shadow:none;
+		box-shadow:none;
+		background-image:none;
+		background-color:$color-warning-dark;
+		color:$color-button-text;
+		border-color:$color-warning-dark;
+	}
 }

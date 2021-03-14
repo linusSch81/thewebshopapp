@@ -4,8 +4,8 @@
 .form-quantity {
 	display: inline-block;
 	margin: 0 auto;
-	background-color: $color-white;
-	border: 1px solid rgba($color-black, 0.12);
+	background-color: $color-light;
+	border: 1px solid rgba($color-dark, 0.12);
 	width: 10em;
 	max-width: 100%;
 	overflow: hidden;
@@ -24,8 +24,8 @@
   
 	  width: 2em;
 	  flex: none;
-	  background-color: $color-white;
-	  box-shadow: 0 0 0 1px rgba($color-black, 0.12);
+	  background-color: $color-light;
+	  box-shadow: 0 0 0 1px rgba($color-dark, 0.12);
 	  &-icon {
 		font-family: $font-family-body-bold;
 		font-weight: $font-weight-body-bold;
@@ -35,7 +35,7 @@
 	&-trigger:focus {
 	  background-color: $color-accent;
 	  border-color: $color-accent-dark;
-	  color: $color-white;
+	  color: $color-light;
 	  box-shadow: none;
 	}
   

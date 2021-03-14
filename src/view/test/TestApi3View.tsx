@@ -8,6 +8,7 @@ export const TestApi3View = () => {
 	const [pokemonData, setPokemonData] = useState<any>([]);
 	const [loading, setLoading] = useState<boolean>(false);
 	const [search, setSearch] = useState<string>("");
+
 	const debounceSearchTerm = useDebounce(search, 500);
 
 	const fetchData = async () => {
@@ -17,6 +18,10 @@ export const TestApi3View = () => {
 		console.log(data);
 		setLoading(false);
 	};
+	useEffect(() => {
+		fetchData();
+		// eslint-disable-next-line
+	}, [debounceSearchTerm]);
 
 	const displayData = () => {
 		if (!loading) {
@@ -30,11 +35,6 @@ export const TestApi3View = () => {
 			);
 		}
 	};
-
-	useEffect(() => {
-		fetchData();
-		// }, [search]);
-	}, [debounceSearchTerm]);
 
 	return (
 		<div className="view">

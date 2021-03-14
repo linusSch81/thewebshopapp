@@ -4,7 +4,7 @@ export interface loginCredentialsInterface {
 }
 
 /** BackendAPI: */
-export interface iCreateNewUser {
+export interface iAdminUser {
   username: string,
   password: string,
   age?: number
