@@ -62,6 +62,10 @@ export const SignInView = () => {
 
   return (
     <div className="view">
+      <strong style={{ color: "red" }}>
+				Todo: add check with server to see if user is in db
+			</strong>
+
       <h1>Sign in</h1>
       <h2>Login Credentials</h2>
       <>

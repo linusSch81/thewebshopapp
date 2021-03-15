@@ -11,6 +11,11 @@ export const AdminUsersView = () => {
 
 	return (
 		<div className="view">
+			<ul style={{ color: "red" }}>
+				<li>Todo: Add admin credentials to be able to see this content.</li>
+				<li>Todo: Add Admin - products.</li>
+			</ul>
+
 			<h1>Admin - Users</h1>
 			<p>
 				Here you can make{" "}
@@ -43,10 +48,7 @@ export const AdminUsersView = () => {
 				Delete option available
 			</p>
 
-			<AdminReadUsers
-				usersList={usersList}
-				setLoading={setLoading}
-			/>
+			<AdminReadUsers usersList={usersList} setLoading={setLoading} />
 		</div>
 	);
 };

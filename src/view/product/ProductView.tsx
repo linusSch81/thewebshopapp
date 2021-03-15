@@ -10,6 +10,9 @@ import { ProductList } from "../../components/product/productlist/ProductList";
 export const ProductView = () => {
   return (
     <div className="view">
+     <strong style={{ color: "red" }}>
+				Todo: create product db on server, populate with content and connect the real API instead of the <a href="https://fakestoreapi.com/">Fake Store API</a>
+			</strong>
       <h1>Product</h1>
       {/* <p> * Show the actual product item * </p> */}
       <ProductList />
