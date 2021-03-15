@@ -100,6 +100,7 @@ export const AdminUpdateUser = (props: {
 					autoComplete="false"
 					defaultValue={currentUser.password}
 					onChange={(event) => {
+						
 						setUpdatedUser({
 							...updatedUser,
 							password: event.target.value,
@@ -119,6 +120,7 @@ export const AdminUpdateUser = (props: {
 							type="number"
 							defaultValue={currentUser.age}
 							onChange={(event) => {
+								//console.log(updatedUser);
 								setUpdatedUser({
 									...updatedUser,
 									age: parseInt(event.target.value),
